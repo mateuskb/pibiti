@@ -4,7 +4,7 @@ import google_auth_oauthlib.flow
 
 api_key = 'AIzaSyDCk4g1gbYJM6fOELD09QvldQhKykKBVcM'
 login_code = '4/vwHpdPlMhTjPSdKD06LDEImbkEfOUrHwwegW9_1UP-8Vf6rO9O71HeY'
-scopes = ["https://www.googleapis.com/auth/youtube"]
+scopes = ["http://www.googleapis.com/auth/youtube"]
 client_secrets_file = "client_secret.json"
 
 flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
