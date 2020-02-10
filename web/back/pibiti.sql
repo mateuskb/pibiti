@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.6.6deb5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 06-Fev-2020 às 22:03
--- Versão do servidor: 10.4.11-MariaDB
--- versão do PHP: 7.2.26
+-- Host: localhost:3306
+-- Tempo de geração: 10/02/2020 às 13:37
+-- Versão do servidor: 5.7.26-0ubuntu0.18.04.1
+-- Versão do PHP: 7.2.24-0ubuntu0.18.04.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -25,89 +23,75 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `logins`
+-- Estrutura para tabela `logins`
 --
 
 CREATE TABLE `logins` (
   `log_pk` int(11) NOT NULL,
   `log_fk_user` int(11) NOT NULL,
   `log_dt_acessado` timestamp NULL DEFAULT NULL,
-  `log_b_logado` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `logins`
---
-
-INSERT INTO `logins` (`log_pk`, `log_fk_user`, `log_dt_acessado`, `log_b_logado`) VALUES
-(1, 1, '2020-02-06 21:03:02', 0);
+  `log_dt_last_movement` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `users`
+-- Estrutura para tabela `users`
 --
 
 CREATE TABLE `users` (
   `usr_pk` int(11) NOT NULL,
-  `usr_c_login` varchar(40) NOT NULL,
-  `usr_c_password` varchar(120) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `usr_c_username` varchar(40) NOT NULL,
+  `usr_c_hash` varchar(240) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `users`
+-- Fazendo dump de dados para tabela `users`
 --
 
-INSERT INTO `users` (`usr_pk`, `usr_c_login`, `usr_c_password`) VALUES
-(1, 'pibiti', 'teste'),
-(2, 'pibiti2', 'teste2');
+INSERT INTO `users` (`usr_pk`, `usr_c_username`, `usr_c_hash`) VALUES
+(1, 'teste', 'teste');
 
 --
--- Índices para tabelas despejadas
+-- Índices de tabelas apagadas
 --
 
 --
--- Índices para tabela `logins`
+-- Índices de tabela `logins`
 --
 ALTER TABLE `logins`
   ADD PRIMARY KEY (`log_pk`),
-  ADD UNIQUE KEY `log_pk` (`log_pk`),
-  ADD KEY `login_fk_idx` (`log_pk`),
   ADD KEY `log_fk_user` (`log_fk_user`);
 
 --
--- Índices para tabela `users`
+-- Índices de tabela `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`usr_pk`),
-  ADD UNIQUE KEY `usr_pk` (`usr_pk`);
+  ADD PRIMARY KEY (`usr_pk`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT de tabelas apagadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `logins`
 --
 ALTER TABLE `logins`
-  MODIFY `log_pk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `log_pk` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de tabela `users`
 --
 ALTER TABLE `users`
   MODIFY `usr_pk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- Restrições para dumps de tabelas
+--
 
 --
--- Restrições para despejos de tabelas
---
-
---
--- Limitadores para a tabela `logins`
+-- Restrições para tabelas `logins`
 --
 ALTER TABLE `logins`
-  ADD CONSTRAINT `logins_ibfk_1` FOREIGN KEY (`log_fk_user`) REFERENCES `users` (`usr_pk`) ON UPDATE CASCADE;
-COMMIT;
+  ADD CONSTRAINT `fk_login_user` FOREIGN KEY (`log_fk_user`) REFERENCES `users` (`usr_pk`) ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
