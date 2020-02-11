@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 10/02/2020 às 13:37
+-- Tempo de geração: 11/02/2020 às 09:53
 -- Versão do servidor: 5.7.26-0ubuntu0.18.04.1
 -- Versão do PHP: 7.2.24-0ubuntu0.18.04.2
 
@@ -19,6 +19,18 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `pibiti`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `equips`
+--
+
+CREATE TABLE `equips` (
+  `equ_pk` int(11) NOT NULL,
+  `qui_b_rele1` tinyint(1) NOT NULL DEFAULT '1',
+  `qui_b_rele2` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -57,6 +69,12 @@ INSERT INTO `users` (`usr_pk`, `usr_c_username`, `usr_c_hash`) VALUES
 --
 
 --
+-- Índices de tabela `equips`
+--
+ALTER TABLE `equips`
+  ADD PRIMARY KEY (`equ_pk`);
+
+--
 -- Índices de tabela `logins`
 --
 ALTER TABLE `logins`
@@ -73,6 +91,11 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabelas apagadas
 --
 
+--
+-- AUTO_INCREMENT de tabela `equips`
+--
+ALTER TABLE `equips`
+  MODIFY `equ_pk` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de tabela `logins`
 --

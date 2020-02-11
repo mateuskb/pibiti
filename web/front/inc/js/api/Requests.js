@@ -5,7 +5,7 @@ const axios = require('axios');
 // GET
 async function makeGetRequest() {
   
-  let res = await axios.get(constants.URL_PATH + '/hello/teste');
+  let res = await axios.get(constants.URL_PATH + '/');
 
   let data = res.data;
   console.log(data);
