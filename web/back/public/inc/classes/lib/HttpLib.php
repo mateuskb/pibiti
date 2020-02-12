@@ -5,7 +5,7 @@ class HttpLib {
     public function get_authorization($headers) {
         $auth = isset($headers['Authorization'][0]) ? $headers['Authorization'][0] : '';
         if (empty($auth)){
-            return '';
+            return false;
         } else {
             try {
                 $arr = explode(' ',trim($auth));
@@ -20,7 +20,7 @@ class HttpLib {
                         $arr = explode(':', $decoded);
                         $resp = [];
                         $resp['username'] = $arr[0];
-                        $resp['password'] = $arr[0];
+                        $resp['password'] = $arr[1];
 
                         return $resp; 
                         //return $resp;                    

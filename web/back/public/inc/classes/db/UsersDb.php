@@ -1,6 +1,6 @@
 <?php 
 
-class Fruit {
+class UserDb {
 
     function __construct($name, $color) {
         $this->name = $name; 
