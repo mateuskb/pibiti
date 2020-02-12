@@ -3,7 +3,6 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Factory\AppFactory;
 
-
 require __DIR__ . '/../vendor/autoload.php';
 
 require_once(__dir__.'/inc/consts/consts.php');
@@ -26,9 +25,7 @@ $app->get('/', function (Request $request, Response $response, $args) {
 $app->get('/login', function (Request $request, Response $response, $args) {
     $headers = $request->getHeaders();
     $auth = (new HttpLib())->get_authorization($headers, $tipo='basic');
-    //$response->getBody()->write($auth[0].' - ' .$auth[1]);
-    $response->getBody()->write('');
-    var_dump($resp[0]);
+    $response->getBody()->write(json_encode($auth));
     return $response;
 });
 

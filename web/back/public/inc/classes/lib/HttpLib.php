@@ -18,10 +18,9 @@ class HttpLib {
                     case 'Basic':
                         $decoded = base64_decode($auth);
                         $arr = explode(':', $decoded);
-                        $resp = [
-                            "username"=> arr[0],
-                            "password"=> arr[1]
-                        ];
+                        $resp = [];
+                        $resp['username'] = $arr[0];
+                        $resp['password'] = $arr[0];
 
                         return $resp; 
                         //return $resp;                    
