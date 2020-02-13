@@ -10,7 +10,8 @@ require_once(__dir__.'/inc/consts/consts.php');
 $classes_url = __DIR__.URL_CLASSES;
 
 # Calling classes
-require_once($classes_url.'/HttpLib.php');
+require_once($classes_url.'/lib/HttpLib.php');
+require_once($classes_url.'/db/UsersDb.php');
 
 # Starting App
 $app = AppFactory::create();
@@ -24,8 +25,10 @@ $app->get('/', function (Request $request, Response $response, $args) {
 
 $app->get('/login', function (Request $request, Response $response, $args) {
     $headers = $request->getHeaders();
-    $auth = (new HttpLib())->get_authorization($headers, $tipo='basic');
-    $response->getBody()->write(json_encode($auth));
+    $auth = (new HttpLib())->get_authorization($headers);
+    $resp = (new UserDB())->login($auth);
+    $response->getBody()->write($resp);
+    //$response->getBody()->write(json_encode($auth));
     return $response;
 });
 

@@ -1,11 +1,13 @@
 <?php 
 
+require_once($classes_url.'/lib/JwtLib.php');
+
 class HttpLib {
 
     public function get_authorization($headers) {
         $auth = isset($headers['Authorization'][0]) ? $headers['Authorization'][0] : '';
         if (empty($auth)):
-            return '';
+            return false;
         else:
             try {
                 $arr = explode(' ',trim($auth));
@@ -26,7 +28,8 @@ class HttpLib {
                         //return $resp;                    
                     
                     case 'Bearer':
-                        return  'Deu bearer';
+                        $auth = (new JwtLib())->decode($auth);
+                        return  $auth;
                     
                     default:
                         return false;

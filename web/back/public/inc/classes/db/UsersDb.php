@@ -1,15 +1,33 @@
 <?php 
 
-class Fruit {
+require __DIR__ . '/../../../../vendor/autoload.php';
 
-    function __construct($name, $color) {
-        $this->name = $name; 
-        $this->color = $color; 
+require_once(__dir__.'/../lib/DbLib.php');
+
+
+class UserDb {
+
+    function __construct($_conn=NULL) {
+        if(!is_null($_conn)):
+            $this->_conn = is_object($_conn) ? $_conn : false;
+        else:
+            try{
+                $this->_conn = (new DbLib());
+            }catch (Exception $e){
+                $this->_conn = false;
+            }
+        endif;
+
     }
-    function get_name() {
-        return $this->name;
-    }
-    function get_color() {
-        return $this->color;
+
+    public function login($input) {
+
+        if(!$this->_conn):
+            return 'Erro na conexão com o banco de dados!';
+        else:
+            $username = array_key_exists("username",$input) ? $input['username'] : '';
+            $password = array_key_exists("password",$input) ? $input['password'] : '';
+            return "Username = $username \n Password = $password \n Conection = Conectado";
+        endif; 
     }
 }
