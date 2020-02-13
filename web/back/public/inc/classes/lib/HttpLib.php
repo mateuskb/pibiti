@@ -4,16 +4,16 @@ class HttpLib {
 
     public function get_authorization($headers) {
         $auth = isset($headers['Authorization'][0]) ? $headers['Authorization'][0] : '';
-        if (empty($auth)){
-            return false;
-        } else {
+        if (empty($auth)):
+            return '';
+        else:
             try {
                 $arr = explode(' ',trim($auth));
 
                 $tipo_auth = $arr[0];
                 $auth = $arr[1];
                 
-                switch ( $tipo_auth ){
+                switch ( $tipo_auth ):
 
                     case 'Basic':
                         $decoded = base64_decode($auth);
@@ -30,10 +30,10 @@ class HttpLib {
                     
                     default:
                         return false;
-                }
+                endswitch;
             } catch (Exception $e){
                 return false;
             }
-        }
+        endif;
     }
 }   
