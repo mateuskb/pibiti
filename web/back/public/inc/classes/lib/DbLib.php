@@ -8,20 +8,23 @@ class DbLib {
 
     function __construct() {
         
-        $username = USERNAME;
-        $password = PASSWORD;
+        $this->username = USERNAME;
+        $this->password = PASSWORD;
         $host = SERVERHOST;
         $db = DB;
 
-        $conn_str = "mysql:host=$host;dbname=$db";
+        $this->conn_str = "mysql:host=$host;dbname=$db";
 
+    }
+
+    public function connect(){
         try {
-            $conn = new PDO($conn_str, $username, $password);
+            $conn = new PDO($this->conn_str, $this->username, $this->password);
             // set the PDO error mode to exception
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $conn;
         }catch(PDOException $e) {
-            return false;
+            return 'Error: '.$e;
         }
     }
 }

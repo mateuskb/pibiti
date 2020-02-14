@@ -8,5 +8,11 @@
     // DB
     define('SERVERHOST', 'localhost');
     define('USERNAME', 'mateuskb'); 
-    define('PASSWORD', 'Qwerty123');
+    define('PASSWORD', 'Qwerty123@');
     define('DB', 'pibiti');
+
+    define("OPTIONS_HASH", 
+        [
+            'cost' => 12
+        ]
+    );
