@@ -1,19 +1,18 @@
 <?php
-require __DIR__ . '/../../../../vendor/autoload.php';
-
 use \Firebase\JWT\JWT;
-
-include_once __dir__.'/../../consts/consts.php';
+define('JWT_KEY','fjksdh78whfu7823hr23r#$2378fsdffuwehas489ry43bnferiufad34trfdhuj7nfwef');
 
 class JwtLib {
     public function encode($array) {
         try{
             if(is_array($array)):
-                return(JWT::encode($array, JWT_KEY));
+                return(JWT::encode($array, JWT_KEY, 'RS256'));
             else:
+                return 'num é array';
                 return false;
             endif;
         } catch (Exception $e){
+            return 'Erro:'.$e;
             return false;
         }
     }
@@ -33,3 +32,14 @@ class JwtLib {
         
     }
 }
+
+$jwt = new JwtLib;
+
+$array = [
+    'usr_pk'=>1,
+    'log_pk'=>10
+];
+
+$token = $jwt->encode($array);
+
+echo $token;

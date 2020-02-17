@@ -33,4 +33,11 @@ $app->get('/login', function (Request $request, Response $response, $args) {
     return $response;
 });
 
+$app->get('/permission', function (Request $request, Response $response, $args) {
+    $resp = (new UserDB())->permission();
+    //$response->getBody()->write($resp);
+    $response->getBody()->write(json_encode($resp));
+    return $response;
+});
+
 $app->run();
