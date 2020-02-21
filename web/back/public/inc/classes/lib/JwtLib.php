@@ -20,16 +20,13 @@ class JwtLib {
     public function decode($token) {
         try{
             if(is_string($token) & !empty($token)):
-                return(JWT::decode($token, JWT_KEY, array('RS256')));
+                return(JWT::decode($token, JWT_KEY, array("HS256")));
             else:
                 return false;
             endif;
         } catch (Exception $e){
-            return false;
+            return 'ERROR: '.$e;
         }
 
-    }
-    private function validade($array){
-        
     }
 }

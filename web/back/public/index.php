@@ -33,6 +33,17 @@ $app->get('/login', function (Request $request, Response $response, $args) {
     return $response;
 });
 
+$app->get('/logout', function (Request $request, Response $response, $args) {
+    $headers = $request->getHeaders();
+    $payload = (new HttpLib())->get_authorization($headers);
+    $input = $payload;
+    $resp = (new UserDB())->logout($input);
+    //$response->getBody()->write($resp);
+    $response->getBody()->write(json_encode($resp));
+    //$response->getBody()->write(json_encode($input));
+    return $response;
+});
+
 $app->get('/permission', function (Request $request, Response $response, $args) {
     $resp = (new UserDB())->permission();
     //$response->getBody()->write($resp);

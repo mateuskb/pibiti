@@ -275,6 +275,73 @@ class UserDb {
 
     }
 
+    public function logout($input) {
+        // Vars
+        $id_usuario = 0;
+        $id_login = 0;
+
+        $data = [
+            'ok'=>false,
+            'errors'=>[],
+            'data'=>true
+        ];
+        
+        if(isset($input)){
+            $id_usuario = array_key_exists("usr_pk",$input) ? $input['usr_pk'] : '';
+            $id_login = array_key_exists("log_pk",$input) ? $input['log_pk'] : '';
+        };
+        
+        if ($id_usuario < 1):
+            $data['errors']['idUsuario'] = 'idUsuario não indicado!';
+        endif;
+        if ($id_login < 1):
+            $data['errors']['idLogin'] = 'idLogin não indicado!';
+        endif;
+        
+        //$data['idUsuario'] = $id_usuario;
+        //$data['idLogin'] = $id_login;
+        
+
+        if(empty($data['errors'])):
+            if(!isset($this->conn)):
+                $data['errors']['conn'] = 'Erro na conexão com o banco de dados!';
+            else:
+                try{
+                    $this->conn->beginTransaction();
+                    
+                    $sql = '
+                        UPDATE 
+                            logins
+                        SET 
+                            log_b_logado = 0
+                        WHERE 
+                            log_pk = :id_login AND
+                            log_fk_user = :id_usuario
+                        ;
+                        
+                    ';
+                    $stmt = $this->conn->prepare($sql);
+                    $stmt->bindValue(':id_login', $id_login, PDO::PARAM_INT);                        
+                    $stmt->bindValue(':id_usuario', $id_usuario, PDO::PARAM_INT);                        
+                    $stmt->execute();
+                
+                } catch (Exception $e){
+                    $data['errors']['conn'] = "Erro na conexão com o banco de dados: " . $e;
+                }
+            endif; 
+            if(empty($data['errors'])):
+                $data['ok'] = true;
+                $data['data'] = true;
+                $this->conn->commit();
+            else:
+                $this->conn->rollback(); 
+            endif;
+        endif;
+        
+        return $data;
+
+    }
+
     public function permission() {
         // VARS
         $dt_now = '';

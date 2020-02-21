@@ -25,18 +25,37 @@ class HttpLib {
                         $resp['password'] = $arr[1];
 
                         return $resp; 
-                        //return $resp;                    
+                        //return $resp;        
+                        break;            
                     
                     case 'Bearer':
-                        $auth = (new JwtLib())->decode($auth);
-                        return  $auth;
-                    
+                        $payload = (new JwtLib())->decode($auth);
+                        $payload = $this->payload_to_array($payload);
+                        return $payload;
+                        break;
                     default:
                         return false;
+                        break;            
                 endswitch;
             } catch (Exception $e){
                 return false;
             }
         endif;
+    }
+
+    private function payload_to_array($payload) {
+        $array = [];
+        
+        try{
+            $usr_pk = $payload->usr_pk;
+            $log_pk = $payload->log_pk;
+            $array['usr_pk'] = $usr_pk;
+            $array['log_pk'] = $log_pk;
+
+            return $array;
+        } catch (Exception $e) {
+            return false;
+        }
+    
     }
 }   

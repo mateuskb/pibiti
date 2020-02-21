@@ -1,11 +1,39 @@
-var online = '';
-var path = '../../../back/login.php';
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 $(document).ready(function () {
+    var resp;
+    
+    $.getScript( "./inc/js/api/Requests.js" )
+        .done(function( script, textStatus ) {
+            
+            Permission().then(function(response){
+                resp = response;
+                data = resp.data
+                if(data.ok){
+                    if(data.data){
+                        $(".not_allowed").css("display", "none")
+                    }else{
+                        $(".allowed").css("display", "none")
+                    };
+                }else{
+                    alert("Erro em comunicação com o servidor!");
+                    $(".allowed").css("display", "none")
+                };
+                //console.log(resp);
+                //alert(resp);
+
+            }).catch((error)=>{
+                //console.log(error);
+                alert("Erro em comunicação com o servidor!");
+                $(".allowed").css("display", "none");   
+
+            });
+            
+            // alert( textStatus );
+        })
+        .fail(function( jqxhr, settings, exception ) {
+            alert( "Error: " +exception );
+            $(".allowed").css("display", "none")
+        });
+    
 
     $("#submit").click(function () {
 
@@ -21,8 +49,36 @@ $(document).ready(function () {
             alert("Preencha os campos!!!");
 
         } else {
-            $.getScript('/api/Requests.js', function () {          
-                makeRequest();  
+            $.getScript( "./inc/js/api/Requests.js" )
+            .done(function( script, textStatus ) {
+                
+                Login().then(function(response){
+                    resp = response;
+                    data = resp.data
+                    if(data.ok){
+                        if(data.data){
+                            console.log(data.data);
+                            alert(data.data);
+                        }else{
+                            console.log(data.data);
+                            alert(data.data);
+                        };
+                    }else{
+                        alert("Erro em comunicação com o servidor!");
+                    };
+                    //console.log(resp);
+                    //alert(resp);
+    
+                }).catch((error)=>{
+                    //console.log(error);
+                    alert("Erro em comunicação com o servidor!");
+    
+                });
+                
+                // alert( textStatus );
+            })
+            .fail(function( jqxhr, settings, exception ) {
+                alert( "Error: " +exception );
             });
             // resp = makeRequest();  
             // alert(resp);         
