@@ -12,10 +12,10 @@
     <script src='inc/js/script.js'></script>
     
 
-    <!------ Include the above in your HEAD tag ---------->
 </head>
 <html lang='pt-br'>
     <div class="wrapper fadeInDown">
+        <!-- Caso o módulo esteja disponível -->
         <div id="formContent" class="allowed" style="background-color: #049b69;">
             <!-- Tabs Titles -->
 
@@ -26,8 +26,8 @@
 
             <!-- Login Form -->
             <form class="form" method="post" action="#">
-                <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-                <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+                <input type="text" id="login" class="fadeIn second input" name="login" placeholder="login">
+                <input type="password" id="password" class="fadeIn third input" name="password" placeholder="password">
                 <input type="submit" class="fadeIn fourth" id='submit' name='submit' value="Log In">
             </form>
 
@@ -37,6 +37,8 @@
             </div>
 
         </div>
+
+        <!-- Caso módulo esteja ocupado -->
         <div id="formContent" class="not_allowed"  style="background-color: #c12a2c;">
             <!-- Icon -->
             <div class="fadeIn first">

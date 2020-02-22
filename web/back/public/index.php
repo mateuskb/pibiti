@@ -51,4 +51,14 @@ $app->get('/permission', function (Request $request, Response $response, $args) 
     return $response;
 });
 
+$app->get('/verify', function (Request $request, Response $response, $args) {
+    $headers = $request->getHeaders();
+    $payload = (new HttpLib())->get_authorization($headers);
+    $input = $payload;
+    $resp = (new UserDB())->verify($input);
+    $response->getBody()->write(json_encode($resp));
+    //$response->getBody()->write(json_encode($payload));
+    return $response;
+});
+
 $app->run();

@@ -283,7 +283,7 @@ class UserDb {
         $data = [
             'ok'=>false,
             'errors'=>[],
-            'data'=>true
+            'data'=>false
         ];
         
         if(isset($input)){
@@ -405,4 +405,164 @@ class UserDb {
         
         return $data;
     }
+
+    public function verify($input) {
+        // Vars
+        $id_usuario = 0;
+        $id_login = 0;
+        $logado = 0;
+        $dt_now = '';
+        $dt_now_verifier = '';
+        $last_movement = '';
+
+        $data = [
+            'ok'=>false,
+            'errors'=>[],
+            'data'=>false
+        ];
+        
+        if(isset($input)){
+            $id_usuario = array_key_exists("usr_pk",$input) ? $input['usr_pk'] : '';
+            $id_login = array_key_exists("log_pk",$input) ? $input['log_pk'] : '';
+        };
+        
+        if ($id_usuario < 1):
+            $data['errors']['idUsuario'] = 'idUsuario não indicado!';
+        endif;
+        if ($id_login < 1):
+            $data['errors']['idLogin'] = 'idLogin não indicado!';
+        endif;
+        
+        //$data['idUsuario'] = $id_usuario;
+        //$data['idLogin'] = $id_login;
+        
+
+        if(empty($data['errors'])):
+            $dt_now = (new DateTime());
+            $dt_now = $dt_now->format("Y-m-d h:i:s");
+            $dt_now_verifier = (new DateTime())->modify(TIME_VERIFIER ." minutes");
+            $dt_now_verifier = $dt_now_verifier->format("Y-m-d h:i:s");
+                                
+            if(!isset($this->conn)):
+                $data['errors']['conn'] = 'Erro na conexão com o banco de dados!';
+            else:
+                try{
+                    $this->conn->beginTransaction();
+                    
+                    $sql = '
+                        SELECT 
+                            *
+                        FROM
+                            logins
+                        WHERE 
+                            log_pk = :id_login AND
+                            log_fk_user = :id_usuario
+                        ;
+                        
+                    ';
+                    $stmt = $this->conn->prepare($sql);
+                    $stmt->bindValue(':id_login', $id_login, PDO::PARAM_INT);                        
+                    $stmt->bindValue(':id_usuario', $id_usuario, PDO::PARAM_INT);                        
+                    $stmt->execute();
+                    $resp = $stmt->fetch(PDO::FETCH_ASSOC); 
+                    
+                    $last_movement = !empty($resp['log_dt_last_movement']) ? $resp['log_dt_last_movement'] : '';
+                    $logado = !empty($resp['log_b_logado']) ? $resp['log_b_logado'] : 0;
+
+                    if (!empty($last_movement) & $id_login > 0): 
+                            
+                        if (($dt_now_verifier >= $last_movement) || (!$logado)): 
+                            if($logado):
+                                $sql = '
+                                    UPDATE 
+                                        logins
+                                    SET 
+                                        log_b_logado = 0
+                                    WHERE 
+                                        log_pk = :id_login
+                                    ;
+                                    
+                                ';
+                                $stmt = $this->conn->prepare($sql);
+                                $stmt->bindValue(':id_login', $id_login, PDO::PARAM_INT);                        
+                                $stmt->execute();
+                            endif;
+                            $data['errors']['login'] = 'Usuário desconectado.';
+                        else:
+                            $resp = $this->new_movement($id_usuario, $id_login);
+                            if(!($resp['ok'] & $resp['data'])):
+                                $data['errors']['newMovement'] = "Não foi possível adicionar novo movimento!";
+                            endif;
+                        endif;
+                    endif;
+                } catch (Exception $e){
+                    $data['errors']['conn'] = "Erro na conexão com o banco de dados: " . $e;
+                }
+            endif; 
+            if(empty($data['errors'])):
+                $data['ok'] = true;
+                $data['data'] = true;
+                $this->conn->commit();
+            else:
+                $this->conn->rollback(); 
+            endif;
+        endif;
+        
+        return $data;
+
+    }
+
+    public function new_movement($id_usuario, $id_login){
+        $data = [
+            'ok'=>false,
+            'errors'=>[],
+            'data'=>false
+        ];
+
+        if($this->conn->inTransaction()):
+            $in_transaction = true;
+        endif;
+
+        try{
+            $dt_now = (new DateTime());
+            $dt_now = $dt_now->format("Y-m-d h:i:s");
+
+            if(!$in_transaction):
+                $this->conn->beginTransaction();
+            endif;
+
+            $sql = "
+                UPDATE 
+                    logins
+                SET 
+                    log_dt_last_movement = :dt_now
+                WHERE 
+                    log_pk = :id_login AND
+                    log_fk_user = :id_usuario
+                ;
+            ";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindValue(':id_login', $id_login, PDO::PARAM_INT);                        
+            $stmt->bindValue(':id_usuario', $id_usuario, PDO::PARAM_INT);  
+            $stmt->bindValue(':dt_now', $dt_now, PDO::PARAM_STR);  
+            $stmt->execute();
+
+        } catch (Exception $e){
+            $data['errors']['conn'] = "Erro na conexão com o banco de dados: " . $e;
+        }
+
+        if(empty($data['errors'])):
+            $data['ok'] = true;
+            $data['data'] = true;
+            if(!$in_transaction):
+                $this->conn->commit();
+            endif;
+        else:
+            if(!$in_transaction):
+                $this->conn->rollback(); 
+            endif;
+        endif;
+        return $data;
+    }
+    
 }
