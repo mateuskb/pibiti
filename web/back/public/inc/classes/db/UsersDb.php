@@ -388,6 +388,8 @@ class UserDb {
                         if (($dt_now_verifier >= $last_movement) || (!$logado)):
                             $data['data'] = true;
                         endif;
+                    else:
+                        $data['data'] = true;
                     endif;
 
                 } catch (Exception $e){
