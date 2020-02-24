@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href='inc/css/style.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <!--<link href="./inc/css/grid.css" rel="stylesheet">-->
+    <link href="./inc/css/style.css" rel="stylesheet">
 
     <script src='../inc/js/api/consts.js'></script>
     <script src='inc/js/script.js'></script>
@@ -14,5 +18,39 @@
 
 </head>
 <html lang='pt-br'>
-    <button onclick="logout()">logout</button>  
+    <section id='nav'>
+        <nav class="navbar navbar-dark bg-dark justify-content-between">
+            <a class="navbar-brand" href="#">Módulo Pibiti</a>
+            <button type="button" class="btn btn-outline-secondary float-right" onclick="logout()">logout</button>  
+        </nav>
+    </section>
+    <section id="main" class="mt-4">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="live">
+                        <iframe
+                            src="https://player.twitch.tv/?channel=mateuskb"
+                            scrolling="no"
+                            width="100%"
+                            height="100%">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="control">
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="100" value="50" class="ranger" id="myRange">
+                            <h3 id="demo"></h3>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </html>

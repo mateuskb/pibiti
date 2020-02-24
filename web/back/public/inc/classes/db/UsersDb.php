@@ -107,9 +107,9 @@ class UserDb {
 
                     if(empty($data['errors'])):
         
-                        $dt_now = (new DateTime());
+                        $dt_now = (new DateTime('now', new DateTimeZone("UTC")));
                         $dt_now = $dt_now->format("Y-m-d h:i:s");
-                        $dt_now_verifier = (new DateTime())->modify(TIME_VERIFIER ." minutes");
+                        $dt_now_verifier = (new DateTime('now', new DateTimeZone("UTC")))->modify(TIME_VERIFIER ." minutes");
                         $dt_now_verifier = $dt_now_verifier->format("Y-m-d h:i:s");
                         
                         $sql = "
@@ -363,9 +363,9 @@ class UserDb {
                 try{
                     $this->conn->beginTransaction();
 
-                    $dt_now = (new DateTime());
+                    $dt_now = (new DateTime('now', new DateTimeZone("UTC")));
                     $dt_now = $dt_now->format("Y-m-d h:i:s");
-                    $dt_now_verifier = (new DateTime())->modify(TIME_VERIFIER ." minutes");
+                    $dt_now_verifier = (new DateTime('now', new DateTimeZone("UTC")))->modify(TIME_VERIFIER ." minutes");
                     $dt_now_verifier = $dt_now_verifier->format("Y-m-d h:i:s");
                     
                     $sql = "
@@ -440,9 +440,9 @@ class UserDb {
         
 
         if(empty($data['errors'])):
-            $dt_now = (new DateTime());
+            $dt_now = (new DateTime('now', new DateTimeZone("UTC")));
             $dt_now = $dt_now->format("Y-m-d h:i:s");
-            $dt_now_verifier = (new DateTime())->modify(TIME_VERIFIER ." minutes");
+            $dt_now_verifier = (new DateTime('now', new DateTimeZone("UTC")))->modify(TIME_VERIFIER ." minutes");
             $dt_now_verifier = $dt_now_verifier->format("Y-m-d h:i:s");
                                 
             if(!isset($this->conn)):
@@ -526,7 +526,7 @@ class UserDb {
         endif;
 
         try{
-            $dt_now = (new DateTime());
+            $dt_now = (new DateTime('now', new DateTimeZone("UTC")));
             $dt_now = $dt_now->format("Y-m-d h:i:s");
 
             if(!$in_transaction):

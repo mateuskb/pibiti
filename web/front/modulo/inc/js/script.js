@@ -30,9 +30,20 @@ function logout(){
 
 $(document).ready(function () {
     var resp;
+
+    /*------RANGE------*/
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+
+
     try {
         var token = localStorage.getItem('pibiti_token');
 
+        /* ------ VERIFY TOKEN ------ */
         $.getScript( "../inc/js/api/Requests.js" )
         .done(function( script, textStatus ) {
             
@@ -59,3 +70,4 @@ $(document).ready(function () {
         console.log(e);
     }
 });
+
