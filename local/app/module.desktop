@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version = 1.0
+Name = Module
+Exec = /var/www/html/pibiti/local/app/main.py
+Icon = /var/www/html/pibiti/local/app/icon.png
+Type = Application

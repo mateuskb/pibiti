@@ -1,4 +1,4 @@
-#!./venv/bin/python3.7
+#!/var/www/html/pibiti/local/app/venv/bin/python3.7
 """
  Simple graphics demo
  
