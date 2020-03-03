@@ -1,122 +1,90 @@
-#!/usr/bin/env python 
-import os 
-import time 
-import io 
-import pygame 
-# import picamera 
-import subprocess 
-# os.environ['SDL_VIDEODRIVER'] = 'fbcon' 
-# os.environ['SDL_FBDEV'] = '/dev/fb1' 
-# os.environ['SDL_MOUSEDEV'] = '/dev/input/touchscreen' 
-# os.environ['SDL_MOUSEDRV'] = 'TSLIB' 
-pygame.init() 
-lcd = pygame.display.set_mode((0,0))#, pygame.FULLSCREEN) 
-pygame.mouse.set_visible(False) 
-# img_bg = pygame.image.load('/home/pi/camera_bg.jpg') 
-preview_toggle = 0 
-stream_toggle = 0 
-blue = 26, 0, 255 
-white = 255, 255, 255 
-cream = 254, 255, 250 
-# YOUTUBE="rtmp://a.rtmp.youtube.com/live2/"		 
-# KEY= #ENTER PRIVATE KEY HERE
-# stream_cmd = 'ffmpeg -f h264 -r 25 -i - -itsoffset 5.5 -fflags nobuffer -f alsa -ac 1 -i hw:1,0 -vcodec copy -acodec aac -ac 1 -ar 8000 -ab 32k -map 0:0 -map 1:0 -strict experimental -f flv ' + YOUTUBE + KEY
-# stream_pipe = subprocess.Popen(stream_cmd, shell=True, stdin=subprocess.PIPE) 
-# camera = picamera.PiCamera() 
-# camera.resolution = (1080, 720) 
-# camera.rotation   = 180	 
-# camera.crop       = (0.0, 0.0, 1.0, 1.0) 
-# camera.framerate  = 25 
-# rgb = bytearray(camera.resolution[0] * camera.resolution[1] * 3) 
+#!/usr/bin python3
 
-def make_button(text, xpo, ypo, color): 
-       font=pygame.font.Font(None,24)	 
-       label=font.render(str(text),1,(color)) 
-       lcd.blit(label,(xpo,ypo)) 
-       pygame.draw.rect(lcd, cream, (xpo-5,ypo-5,150,35),1) 
-
-def stream(): 
-	# camera.wait_recording(1) 
-    pass
-
-def shutdown_pi(): 
-    os.system("sudo shutdown -h now") 
-
-def preview(): 
-	# stream = io.BytesIO() 
-	# camera.vflip = True
-	# camera.hflip = True 
-	# camera.capture(stream, use_video_port=True, format='rgb', resize=(320, 240)) 
-	# stream.seek(0) 
-	# stream.readinto(rgb) 
-	# stream.close() 
-	# img = pygame.image.frombuffer(rgb[0:(320 * 240 * 3)], (320, 240), 'RGB') 
-	# lcd.blit(img, (0,0)) 
-	make_button("STOP", 175,200, white) 
-	pygame.display.update() 
-
-while True: 
-    if stream_toggle == 1: 
-        stream() 
-    elif preview_toggle == 1: 
-        preview() 
-    else: 
-        click_count = 0		 
-        lcd.fill(blue) 
-        # lcd.blit(img_bg,(0,0))
-        make_button("STREAM", 5, 200, white)
-        make_button("PREVIEW",175,200, white)
-        make_button("POWER", 200, 5, white) 
-        pygame.display.update() 
-    for event in pygame.event.get(): 
-        if (event.type == pygame.MOUSEBUTTONDOWN): 
-            pos = pygame.mouse.get_pos() 
-        if (event.type == pygame.MOUSEBUTTONUP): 
-            pos = pygame.mouse.get_pos() 
-            print(pos)
-            x,y = pos 
-            if y > 100: 
-                if x < 200: 
-                    # print "stream pressed" 
-                    if stream_toggle == 0 and preview_toggle == 0: 
-                        stream_toggle = 1 
-                        lcd.fill(blue) 
-                        lcd.blit(img_bg,(0,0)) 
-                        make_button("STOP", 20, 200, white) 
-                        pygame.display.update() 
-                        # camera.vflip=True 
-                        # camera.hflip = True 
-                        # camera.start_recording(stream_pipe.stdin, format='h264', bitrate = 2000000) 
-                    elif preview_toggle == 1: 
-                        preview_toggle = 0 
-                        lcd.fill(blue) 
-                        lcd.blit(img_bg,(0,0)) 
-                        make_button("STREAM", 5, 200, white) 
-                        make_button("PREVIEW",175,200, white) 
-                        pygame.display.update() 
-                    else: 
-                        stream_toggle = 0 
-                        lcd.fill(blue) 
-                        make_button("STREAM", 5, 200, white) 
-                        make_button("PREVIEW",175,200, white) 
-                        pygame.display.update() 
-                        # camera.stop_recording() 
-                elif x > 225: 
-                    # print "preview pressed" 
-                    if preview_toggle == 0 and stream_toggle == 0: 
-                        preview_toggle = 1 
-                        lcd.fill(blue) 
-                        make_button("STOP", 175,200, white) 
-                        pygame.display.update() 
-                    elif stream_toggle == 1:
-                        stream_toggle = 0
-                        lcd.fill(blue)
-                        make_button("STREAM", 5, 200, white)
-                        make_button("PREVIEW",175,200, white)
-                        pygame.display.update()
-                        # camera.stop_recording()
-                    else: 
-                        preview_toggle = 0
-                        lcd.fill(blue)
-                        make_button("STREAM", 5, 200, white)
-                        make_button("PREVIEW",175,200, white)
+"""
+ Simple graphics demo
+ 
+ Sample Python/Pygame Programs
+ Simpson College Computer Science
+ http://programarcadegames.com/
+ http://simpson.edu/computer-science/
+ 
+"""
+ 
+# Import a library of functions called 'pygame'
+import pygame
+ 
+# Initialize the game engine
+pygame.init()
+ 
+# Define some colors
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+BLUE = (0, 0, 255)
+GREEN = (0, 255, 0)
+RED = (255, 0, 0)
+ 
+PI = 3.141592653
+ 
+# Set the height and width of the screen
+size = (400, 500)
+screen = pygame.display.set_mode(size)
+ 
+pygame.display.set_caption("Rotate Text")
+ 
+# Loop until the user clicks the close button.
+done = False
+clock = pygame.time.Clock()
+ 
+text_rotate_degrees = 0
+ 
+# Loop as long as done == False
+while not done:
+ 
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked close
+            done = True  # Flag that we are done so we exit this loop
+ 
+    # All drawing code happens after the for loop and but
+    # inside the main while not done loop.
+ 
+    # Clear the screen and set the screen background
+    screen.fill(WHITE)
+ 
+    # Draw some borders
+    pygame.draw.line(screen, BLACK, [100,50], [200, 50])
+    pygame.draw.line(screen, BLACK, [100,50], [100, 150])
+ 
+    # Select the font to use, size, bold, italics
+    font = pygame.font.SysFont('Calibri', 25, True, False)
+ 
+    # Sideways text
+    text = font.render("Sideways text", True, BLACK)
+    text = pygame.transform.rotate(text, 90)
+    screen.blit(text, [0, 0])
+ 
+    # Sideways text
+    text = font.render("Upside down text", True, BLACK)
+    text = pygame.transform.rotate(text, 180)
+    screen.blit(text, [30, 0])
+ 
+    # Flipped text
+    text = font.render("Flipped text", True, BLACK)
+    text = pygame.transform.flip(text, False, True)
+    screen.blit(text, [30, 20])
+ 
+    # Animated rotation
+    text = font.render("Rotating text", True, BLACK)
+    text = pygame.transform.rotate(text, text_rotate_degrees)
+    text_rotate_degrees += 1
+    screen.blit(text, [100, 50])
+ 
+    # Go ahead and update the screen with what we've drawn.
+    # This MUST happen after all the other drawing commands.
+    pygame.display.flip()
+ 
+    # This limits the while loop to a max of 60 times per second.
+    # Leave this out and we will use all CPU we can.
+    clock.tick(60)
+ 
+# Be IDLE friendly
+pygame.quit()
