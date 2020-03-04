@@ -39,6 +39,7 @@ $(document).ready(function () {
             Permission().then(function(response){
                 resp = response;
                 data = resp.data;
+                console.log("Data Permission:");
                 console.log(data);
                 if(data.ok){
                     if(data.data){
