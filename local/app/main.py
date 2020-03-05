@@ -1,89 +1,119 @@
 #!/var/www/html/pibiti/local/app/venv/bin/python3.7
-"""
- Simple graphics demo
  
- Sample Python/Pygame Programs
- Simpson College Computer Science
- http://programarcadegames.com/
- http://simpson.edu/computer-science/
- 
-"""
- 
-# Import a library of functions called 'pygame'
 import pygame
  
-# Initialize the game engine
-pygame.init()
- 
-# Define some colors
-BLACK = (0, 0, 0)
-WHITE = (255, 255, 255)
-BLUE = (0, 0, 255)
-GREEN = (0, 255, 0)
-RED = (255, 0, 0)
- 
-PI = 3.141592653
- 
-# Set the height and width of the screen
-size = (400, 500)
-screen = pygame.display.set_mode(size)
- 
-pygame.display.set_caption("Rotate Text")
- 
-# Loop until the user clicks the close button.
-done = False
-clock = pygame.time.Clock()
- 
-text_rotate_degrees = 0
- 
-# Loop as long as done == False
-while not done:
- 
-    for event in pygame.event.get():  # User did something
-        if event.type == pygame.QUIT:  # If user clicked close
-            done = True  # Flag that we are done so we exit this loop
- 
-    # All drawing code happens after the for loop and but
-    # inside the main while not done loop.
- 
+
+def AAfilledRoundedRect(surface,rect,color,radius=0.4):
+
+    """
+    AAfilledRoundedRect(surface,rect,color,radius=0.4)
+
+    surface : destination
+    rect    : rectangle
+    color   : rgb or rgba
+    radius  : 0 <= radius <= 1
+    """
+
+    rect         = pygame.Rect(rect)
+    color        = pygame.Color(*color)
+    alpha        = color.a
+    color.a      = 0
+    pos          = rect.topleft
+    rect.topleft = 0,0
+    rectangle    = pygame.Surface(rect.size,pygame.SRCALPHA)
+
+    circle       = pygame.Surface([min(rect.size)*3]*2,pygame.SRCALPHA)
+    pygame.draw.ellipse(circle,(0,0,0),circle.get_rect(),0)
+    circle       = pygame.transform.smoothscale(circle,[int(min(rect.size)*radius)]*2)
+
+    radius              = rectangle.blit(circle,(0,0))
+    radius.bottomright  = rect.bottomright
+    rectangle.blit(circle,radius)
+    radius.topright     = rect.topright
+    rectangle.blit(circle,radius)
+    radius.bottomleft   = rect.bottomleft
+    rectangle.blit(circle,radius)
+
+    rectangle.fill((0,0,0),rect.inflate(-radius.w,0))
+    rectangle.fill((0,0,0),rect.inflate(0,-radius.h))
+
+    rectangle.fill(color,special_flags=pygame.BLEND_RGBA_MAX)
+    rectangle.fill((255,255,255,alpha),special_flags=pygame.BLEND_RGBA_MIN)
+
+    return surface.blit(rectangle,pos)
+
+
+def main():
+    # Initialize the game engine
+    pygame.init()
+    
+    # Define some colors
+    BLACK = [0, 0, 0]
+    WHITE = [255, 255, 255]
+    BLUE = [0, 0, 255]
+    GREEN = [0, 255, 0]
+    RED = [255, 0, 0]
+    
+    PI = 3.141592653
+
+    running = False
+    
+    # Loop until the user clicks the close button.
+    clock = pygame.time.Clock()
+    
+    # Set the height and width of the screen
+    size = [800, 800] # Screen resolution
+    
+    screen = pygame.display.set_mode(size)
+    
+    #button = AAfilledRoundedRect(screen, (275, 250, 250, 150), color=GREEN, radius=0.3)  # creates a rounded rect object
+    
     # Clear the screen and set the screen background
     screen.fill(WHITE)
- 
-    # Draw some borders
-    pygame.draw.line(screen, BLACK, [100,50], [200, 50])
-    pygame.draw.line(screen, BLACK, [100,50], [100, 150])
- 
+
+    button = AAfilledRoundedRect(screen, (275, 250, 250, 150), color=GREEN, radius=0.3)  # creates a rounded rect object
+
     # Select the font to use, size, bold, italics
     font = pygame.font.SysFont('Calibri', 25, True, False)
- 
-    # Sideways text
-    text = font.render("Sideways text", True, BLACK)
-    text = pygame.transform.rotate(text, 90)
-    screen.blit(text, [0, 0])
- 
-    # Sideways text
-    text = font.render("Upside down text", True, BLACK)
-    text = pygame.transform.rotate(text, 180)
-    screen.blit(text, [30, 0])
- 
-    # Flipped text
-    text = font.render("Flipped text", True, BLACK)
-    text = pygame.transform.flip(text, False, True)
-    screen.blit(text, [30, 20])
- 
-    # Animated rotation
-    text = font.render("Rotating text", True, BLACK)
-    text = pygame.transform.rotate(text, text_rotate_degrees)
-    text_rotate_degrees += 1
-    screen.blit(text, [100, 50])
- 
-    # Go ahead and update the screen with what we've drawn.
-    # This MUST happen after all the other drawing commands.
-    pygame.display.flip()
- 
-    # This limits the while loop to a max of 60 times per second.
-    # Leave this out and we will use all CPU we can.
-    clock.tick(60)
- 
-# Be IDLE friendly
-pygame.quit()
+
+    # Update display
+    pygame.display.update()
+
+    # Loop as long as True
+    while True:
+        for event in pygame.event.get():  # User did something
+            if event.type == pygame.QUIT:  # If user clicked close
+                return False
+            
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_pos = event.pos  # gets mouse position
+
+                # checks if mouse position is over the button
+
+                if button.collidepoint(mouse_pos):
+                    # prints current location of mouse
+                    print('button was pressed at {0}'.format(mouse_pos))
+                    if running:
+                        pygame.draw.rect(screen, GREEN, button)
+                        running = False
+                    else:
+                        pygame.draw.rect(screen, RED, button)
+                        running = True
+
+
+        pygame.draw.rect(screen, GREEN, button)
+
+            
+
+
+        # This limits the while loop to a max of 60 times per second.
+        # Leave this out and we will use all CPU we can.
+        pygame.display.update()
+        clock.tick(60)
+    
+    # Be IDLE friendly
+    pygame.quit()
+    sys.exit
+
+if __name__ == "__main__":
+    main()
