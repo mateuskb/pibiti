@@ -130,9 +130,13 @@ def main_menu():
         clock.tick(60)
         
 def game(): 
-    text = Requests.r_inputs()
+    resp = Requests.r_inputs()
+    if resp:
+        text = str(resp)
+    else:
+        text = 'Erro na conexão com o servidor'
     print(text)
-    text = 'Running ' + datetime.date.today().strftime("%Y-%m-%d_%H:%M:%S")
+    #text = 'Running ' + datetime.date.today().strftime("%Y-%m-%d_%H:%M:%S")
 
     cur_path = os.path.dirname(__file__)
 

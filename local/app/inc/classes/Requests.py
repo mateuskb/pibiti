@@ -15,14 +15,19 @@ class Requests:
 
     @staticmethod
     def r_inputs():
-        url = request_url + ''
+        url = request_url + '/getInputs'
 
         try:
             resp = requests.request("GET", url)
             status = resp.status_code
             resp = resp.json()
-            resp['status'] = status
-        except:
-            resp = ''
+            if resp['ok']:
+                text = resp['data']
+            else:
+                text = resp['errors']
+
+            text['status'] = status
+        except Exception as e:
+            text = f'Error: {e}'
         
-        return resp
+        return text

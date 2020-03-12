@@ -30,3 +30,405 @@ Running 2020-03-11_00:00:00
 Running 2020-03-11_00:00:00
 Running 2020-03-11_00:00:00
 Running 2020-03-11_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Running 2020-03-12_00:00:00
+Erro na conexição
+Erro na conexição
+Erro na conexição
+Erro na conexição
+Erro na conexição
+Erro na conexição
+Erro na conexição
+Erro na conexição
+Erro na conexição
+Erro na conexição
+Erro na conexição
+Erro na conexição
+Erro na conexição
+Erro na conexição
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+Erro na conexão
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+Erro na conexão com o servidor
+Erro na conexão com o servidor
+Erro na conexão com o servidor
+Erro na conexão com o servidor
+Erro na conexão com o servidor
+Erro na conexão com o servidor
+Erro na conexão com o servidor
+Erro na conexão com o servidor
+Erro na conexão com o servidor
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+PIBITI api!
+Inputs
+Inputs
+Inputs
+Inputs
+Inputs
+Inputs
+Inputs
+Inputs
+Inputs
+Inputs
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{"ok":true,"errors":[],"data":true}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '2', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '3', 'inp_b_rele1': '0', 'inp_b_rele2': '0', 'status': 200}
+{'inp_pk': '3', 'inp_b_rele1': '0', 'inp_b_rele2': '0', 'status': 200}
+{'inp_pk': '3', 'inp_b_rele1': '0', 'inp_b_rele2': '0', 'status': 200}
+{'inp_pk': '3', 'inp_b_rele1': '0', 'inp_b_rele2': '0', 'status': 200}
+{'inp_pk': '3', 'inp_b_rele1': '0', 'inp_b_rele2': '0', 'status': 200}
+{'inp_pk': '3', 'inp_b_rele1': '0', 'inp_b_rele2': '0', 'status': 200}
+{'inp_pk': '3', 'inp_b_rele1': '0', 'inp_b_rele2': '0', 'status': 200}
+{'inp_pk': '3', 'inp_b_rele1': '0', 'inp_b_rele2': '0', 'status': 200}
+{'inp_pk': '3', 'inp_b_rele1': '0', 'inp_b_rele2': '0', 'status': 200}

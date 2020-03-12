@@ -29,4 +29,4 @@ log_pos = [60, 410]
 
 
 # Request url
-request_url = 'http://localhost/pibiti/web/back/public/'
+request_url = 'http://localhost/pibiti/web/back/public'
