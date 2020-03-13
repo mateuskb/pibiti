@@ -159,9 +159,13 @@ class InputsDb {
             if(empty($data['errors'])):
                 $data['ok'] = true;
                 $data['data'] = true;
-                $this->conn->commit();
+                if($this->conn->inTransaction()):
+                    $this->conn->commit();
+                endif;
             else:
-                $this->conn->rollback(); 
+                if($this->conn->inTransaction()):
+                    $this->conn->rollback(); 
+                endif;
             endif;
         endif;
         
