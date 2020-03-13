@@ -17,3 +17,10 @@
             'cost' => 12
         ]
     );
+
+    define("INPUTS_AVAILABLE", 
+        [
+            'inp_b_rele1',
+            'inp_b_rele2'
+        ]
+    );

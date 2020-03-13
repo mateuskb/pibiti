@@ -69,4 +69,15 @@ $app->get('/getInputs', function (Request $request, Response $response, $args) {
     return $response;
 });
 
+$app->post('/c_inputs', function (Request $request, Response $response, $args) {
+    $headers = $request->getHeaders();
+    $body = json_decode($request->getBody(), true);
+    $payload = (new HttpLib())->get_authorization($headers);
+    $input = array_merge($body, $payload);
+    $resp = (new InputsDb())->c_inputs($input);
+    $response->getBody()->write(json_encode($resp));
+    #$response->getBody()->write(json_encode($input));
+    return $response;
+});
+
 $app->run();

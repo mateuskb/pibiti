@@ -6,6 +6,7 @@ require_once(__dir__.'/../lib/DbLib.php');
 require_once(__dir__.'/../lib/JwtLib.php');
 
 include_once __dir__.'/../../consts/consts.php';
+include_once __dir__.'/UsersDb.php';
 
 
 class InputsDb {
@@ -28,6 +29,9 @@ class InputsDb {
     }
 
     public function get_inputs(){
+        
+        $in_transaction = false;
+
         $data = [
             'ok'=>false,
             'errors'=>[],
@@ -75,6 +79,94 @@ class InputsDb {
             endif;
         endif;
         return $data;
+    }
+
+    public function c_inputs($input) {
+        // Vars
+        $id_usuario = 0;
+        $id_login = 0;
+        $dt_now = '';
+        $inputs = [];
+
+        $data = [
+            'ok'=>false,
+            'errors'=>[],
+            'data'=>false
+        ];
+        
+        if(isset($input)){
+            $id_usuario = array_key_exists("usr_pk",$input) ? $input['usr_pk'] : '';
+            $id_login = array_key_exists("log_pk",$input) ? $input['log_pk'] : '';
+            $inputs = array_key_exists("inputs",$input) ? $input['inputs'] : [];
+        };
+        
+        if ($id_usuario < 1):
+            $data['errors']['idUsuario'] = 'idUsuario não indicado!';
+        endif;
+
+        if ($id_login < 1):
+            $data['errors']['idLogin'] = 'idLogin não indicado!';
+        endif;
+        
+        //$data['idUsuario'] = $id_usuario;
+        //$data['idLogin'] = $id_login;
+
+        foreach(INPUTS_AVAILABLE as $ia){
+            if (!array_key_exists($ia ,$inputs)):
+                $data['errors']['inputs'][$ia] = 'Input não registrado!';
+            endif;
+        }
+
+        if(empty($data['errors'])):
+
+            $resp = (new UserDb())->verify($input);
+
+            if (!$resp['ok'] & !$resp['data']):
+                $data['errors']['404'] = "Usuário inválido.";
+            endif;
+
+            if(empty($data['errors'])):
+                #$dt_now = (new DateTime('now', new DateTimeZone("UTC")));
+                #$dt_now = $dt_now->format("Y-m-d h:i:s");
+                               
+                if(!isset($this->conn)):
+                    $data['errors']['conn'] = 'Erro na conexão com o banco de dados!';
+                else:
+                    try{
+                        $this->conn->beginTransaction();
+                        
+                        $sql = '
+                            INSERT 
+                                INTO inputs (
+                                    inp_b_rele1,
+                                    inp_b_rele2
+                                ) VALUES (
+                                    :inp_b_rele1,
+                                    :inp_b_rele2
+                                )
+                            
+                        ';
+                        $stmt = $this->conn->prepare($sql);
+                        $stmt->bindValue(':inp_b_rele1', $inputs['inp_b_rele1'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_b_rele2', $inputs['inp_b_rele2'], PDO::PARAM_INT);                        
+                        $stmt->execute();
+                    
+                    } catch (Exception $e){
+                        $data['errors']['conn'] = "Erro na conexão com o banco de dados: " . $e;
+                    }
+                endif; 
+            endif;
+            if(empty($data['errors'])):
+                $data['ok'] = true;
+                $data['data'] = true;
+                $this->conn->commit();
+            else:
+                $this->conn->rollback(); 
+            endif;
+        endif;
+        
+        return $data;
+
     }
     
 }
