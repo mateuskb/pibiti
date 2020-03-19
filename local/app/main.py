@@ -13,6 +13,7 @@ pygame.init()
 my_font = pygame.font.SysFont("Times New Roman", 30)
 my_font2 = pygame.font.SysFont("Times New Roman", 15)
 my_font3 = pygame.font.SysFont("Times New Roman", 60)
+cur_path = os.path.dirname(__file__)
 
 
 def truncline(text, font, maxwidth):
@@ -54,28 +55,7 @@ def wrap_multi_line(text, font, maxwidth):
     return list(lines)
 
 
-def clock_page():
-    #window.fill(ccc)
 
-    if running:
-        button = pygame.draw.rect(window, (usual_red), (start_x, start_y, rectWidth, rectHeight), 0)
-        #log = pygame.draw.rect(window, (light_grey), (50, 400, 700, 350), 0)
-    else:
-        button = pygame.draw.rect(window, (light_green), (start_x, start_y, rectWidth, rectHeight), 0)
-
-        
-    for element in elements:
-        
-        if element[0] == 'end' and not running:            
-            pass
-        elif element[0] == 'start' and running:  
-            pass
-        else:
-            window.blit(element[1], element[2]) 
-            
-
-
-    pygame.display.update()
     
 def main():
     global window, clock
@@ -112,59 +92,147 @@ def main_menu():
         for event in pygame.event.get():
             
             if event.type == pygame.QUIT:
+
+                " Delete content from temporary log file before quitting! "
+                with open(cur_path+ "/log/log.txt", 'w') as log_file:
+                    log_file.write('Module started!\n'+ '--'*20 + '\n')
+                
+                " Stop module before quitting! "
+                running = False
+
+                " Close window "
                 return False
 
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:
                     if button.collidepoint(event.pos):
                         if running:
+
+                            " Delete content from temporary log file! "
+                            with open(cur_path+ "/log/log.txt", 'w') as log_file:
+                                log_file.write('Module started!\n'+ '--'*20 + '\n')
+                            
                             running = False
                         else:
                             running = True
         
+        " Update elements conditions "
         clock_page()
 
         if running:
-            game()
+            " Start module "
+            module()
             
         clock.tick(60)
         
-def game(): 
+def module(): 
+    " Get new log "
+    request()
+
+    " Write log on container "
+    read_log()
+
+    " Module rate"
+    sleep(0.1)
+
+
+"""
+    App built-in functions
+"""
+
+def request():
+    """
+        Call app file,
+        Get lasts inputs,
+        Update module if possible,
+        Write to log file
+    """
+    text = ''
+
+    with open(cur_path+ "/log/log.txt", 'r') as log:
+            lines = log.read().splitlines()
+    
+    try:
+        last_line = lines[-1]
+    except:
+        last_line = ''
+
+    #print(last_line)
     resp = Requests.r_inputs()
+    #print(resp)
     if resp:
         text = str(resp)
+        if text == last_line:
+            text = False
     else:
         text = 'Erro na conexão com o servidor'
-    print(text)
-    #text = 'Running ' + datetime.date.today().strftime("%Y-%m-%d_%H:%M:%S")
+    #print(text)
 
-    cur_path = os.path.dirname(__file__)
+    if text:
+        with open(cur_path+ "/log/logs.txt", 'a') as logs_file:
+            logs_file.write(text + '\n')
+        with open(cur_path+ "/log/log.txt", 'a') as log_file:
+            log_file.write(text + '\n')
 
-    with open(cur_path+ "/log/logs.txt", 'a') as logs_file:
-        logs_file.write(text + '\n')
+    return text
 
-    read_log()
-    sleep(0.1)
-    
+
 def read_log():
-    print("------------------------")
+    
+    """
+        Read log file and write to console in app
+    """
+
     text = ''
-    cur_path = os.path.dirname(__file__)
-    with open(cur_path+ "/log/logs.txt", 'r') as log:
+    
+    with open(cur_path+ "/log/log.txt", 'r') as log:
         lines = log.read().splitlines()
     
-    lines = lines[-13: -1]
-    lines = wrap_multi_line(lines, my_font2, 390)
-    lines = lines[-13: -1]
+    lines = lines[-13:]
+    lines = wrap_multi_line(lines, my_font2, 590)
+    lines = lines[-13:]
+    
+    #print("-*"*30)
+    #print(lines)
+
     labels = []
+    
     for line in lines:
         l = my_font2.render(line, 2, black)
         labels.append(l)
-        print(line)
+        #print(line)
 
     pygame.draw.rect(window, (light_grey), (50, 400, 700, 350), 0)
+    
     for line in range(len(labels)):
         window.blit(labels[line],(log_pos[0],log_pos[1]+(line*15)+(15*line)))
+
+
+def clock_page():
+    """
+        Update screen
+    """
+    #window.fill(ccc)
+
+    if running:
+        button = pygame.draw.rect(window, (usual_red), (start_x, start_y, rectWidth, rectHeight), 0)
+        #pygame.draw.rect(window, (light_grey), (50, 400, 700, 350), 0)
+    else:
+        button = pygame.draw.rect(window, (light_green), (start_x, start_y, rectWidth, rectHeight), 0)
+
+        
+    for element in elements:
+        
+        if element[0] == 'end' and not running:            
+            pass
+        elif element[0] == 'start' and running:  
+            pass
+        else:
+            window.blit(element[1], element[2]) 
+            
+
+
+    pygame.display.update()      
 
 
 
