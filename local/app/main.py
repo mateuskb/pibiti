@@ -188,9 +188,9 @@ def read_log():
     with open(cur_path+ "/log/log.txt", 'r') as log:
         lines = log.read().splitlines()
     
-    lines = lines[-13:]
+    lines = lines[-11:]
     lines = wrap_multi_line(lines, my_font2, 590)
-    lines = lines[-13:]
+    lines = lines[-11:]
     
     #print("-*"*30)
     #print(lines)
