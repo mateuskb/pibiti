@@ -62,7 +62,7 @@ def main():
     clock = pygame.time.Clock()
     window = pygame.display.set_mode(resolution)
     window.fill(ccc)
-    pygame.display.set_caption('Módulo control')
+    pygame.display.set_caption('Controle do módulo')
     main_menu()
 
 
