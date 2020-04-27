@@ -903,3 +903,7 @@ Ta igual
 {'inp_pk': '164', 'inp_b_rele1': '0', 'inp_b_rele2': '0', 'status': 200}
 {'inp_pk': '164', 'inp_b_rele1': '0', 'inp_b_rele2': '0', 'status': 200}
 {'inp_pk': '165', 'inp_b_rele1': '1', 'inp_b_rele2': '0', 'status': 200}
+{'inp_pk': '165', 'inp_b_rele1': '1', 'inp_b_rele2': '0', 'status': 200}
+{'inp_pk': '166', 'inp_b_rele1': '1', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '167', 'inp_b_rele1': '0', 'inp_b_rele2': '1', 'status': 200}
+{'inp_pk': '168', 'inp_b_rele1': '0', 'inp_b_rele2': '0', 'status': 200}
