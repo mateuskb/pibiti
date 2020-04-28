@@ -27,9 +27,7 @@ rectHeight = 80
 # Log position
 log_pos = [60, 410]
 
-input_element = {
-    "inp_b_rele1" : "rele1"
-}
+
 
 # Request url
 request_url = 'http://localhost/pibiti/web/back/public'
