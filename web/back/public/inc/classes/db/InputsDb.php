@@ -113,7 +113,7 @@ class InputsDb {
 
         foreach(INPUTS_AVAILABLE as $ia){
             if (!array_key_exists($ia ,$inputs)):
-                $data['errors']['inputs'][$ia] = 'Input não registrado!';
+                $data['errors']['inputs'][$ia] = 'Input não registrado!'.$ia;
             endif;
         }
 
@@ -139,20 +139,56 @@ class InputsDb {
                             INSERT 
                                 INTO inputs (
                                     inp_b_rele1,
-                                    inp_b_rele2
+                                    inp_b_rele2,
+                                    inp_b_rele3,
+                                    inp_b_rele4,
+                                    inp_b_rele5,
+                                    inp_b_rele6,
+                                    inp_b_rele7,
+                                    inp_b_rele8,
+                                    inp_b_rele9,
+                                    inp_b_rele10,
+                                    inp_b_rele11,
+                                    inp_b_rele12,
+                                    inp_b_rele13,
+                                    inp_i_fonte
                                 ) VALUES (
                                     :inp_b_rele1,
-                                    :inp_b_rele2
+                                    :inp_b_rele2,
+                                    :inp_b_rele3,
+                                    :inp_b_rele4,
+                                    :inp_b_rele5,
+                                    :inp_b_rele6,
+                                    :inp_b_rele7,
+                                    :inp_b_rele8,
+                                    :inp_b_rele9,
+                                    :inp_b_rele10,
+                                    :inp_b_rele11,
+                                    :inp_b_rele12,
+                                    :inp_b_rele13,
+                                    :inp_i_fonte
                                 )
                             
                         ';
                         $stmt = $this->conn->prepare($sql);
-                        $stmt->bindValue(':inp_b_rele1', $inputs['inp_b_rele1'], PDO::PARAM_INT);                        
-                        $stmt->bindValue(':inp_b_rele2', $inputs['inp_b_rele2'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_b_rele1', $inputs['inp_b_rele1']);                        
+                        $stmt->bindValue(':inp_b_rele2', $inputs['inp_b_rele2']);                        
+                        $stmt->bindValue(':inp_b_rele3', $inputs['inp_b_rele3']);                        
+                        $stmt->bindValue(':inp_b_rele4', $inputs['inp_b_rele4']);                        
+                        $stmt->bindValue(':inp_b_rele5', $inputs['inp_b_rele5']);                        
+                        $stmt->bindValue(':inp_b_rele6', $inputs['inp_b_rele6']);                        
+                        $stmt->bindValue(':inp_b_rele7', $inputs['inp_b_rele7']);                        
+                        $stmt->bindValue(':inp_b_rele8', $inputs['inp_b_rele8']);                        
+                        $stmt->bindValue(':inp_b_rele9', $inputs['inp_b_rele9']);                        
+                        $stmt->bindValue(':inp_b_rele10', $inputs['inp_b_rele10']);                        
+                        $stmt->bindValue(':inp_b_rele11', $inputs['inp_b_rele11']);                        
+                        $stmt->bindValue(':inp_b_rele12', $inputs['inp_b_rele12']);                        
+                        $stmt->bindValue(':inp_b_rele13', $inputs['inp_b_rele13']);                        
+                        $stmt->bindValue(':inp_i_fonte', $inputs['inp_i_fonte']);                        
                         $stmt->execute();
                     
                     } catch (Exception $e){
-                        $data['errors']['conn'] = "Erro na conexão com o banco de dados: " . $e;
+                        $data['errors']['conn'] = "Erro na execução do SQL: " . $e;
                     }
                 endif; 
             endif;

@@ -20,7 +20,20 @@
 
     define("INPUTS_AVAILABLE", 
         [
-            'inp_b_rele1',
-            'inp_b_rele2'
+            "inp_b_rele1",
+            "inp_b_rele2",
+            "inp_b_rele3",
+            "inp_b_rele4",
+            "inp_b_rele5",
+            "inp_b_rele6",
+            "inp_b_rele7",
+            "inp_b_rele8",
+            "inp_b_rele9",
+            "inp_b_rele10",
+            "inp_b_rele11",
+            "inp_b_rele12",
+            "inp_b_rele13",
+            "inp_i_fonte"
         ]
     );
+    

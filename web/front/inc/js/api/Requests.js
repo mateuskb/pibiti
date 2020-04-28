@@ -209,10 +209,7 @@ async function C_inputs(token, inputs) {
         url: URL_PATH + '/c_inputs',
         headers: { 'Authorization': 'Bearer ' + token },
         data: {
-            "inputs": {
-                "inp_b_rele1": inputs['inp_b_rele1'],
-                "inp_b_rele2": inputs['inp_b_rele2']
-            }
+            "inputs": inputs
         }
 
     }

@@ -13,6 +13,7 @@ def main():
             
             # var
             self.running = 0
+            self.last_line = ''
 
             # basic information
             self.master = master
@@ -38,10 +39,32 @@ def main():
             self.main_button.pack(pady=50)
 
         def run(self):
+            # run code
             if not self.running:
+                # start running
                 self.running = 1
-                print("Greetings!")
+                def read_inputs():
+                    # read inputs
+                    if self.running:
+                        
+                        resp = Requests.r_inputs()
+                        #print(resp)
+                        if resp:
+                            text = str(resp)
+                        else:
+                            text = 'Erro na conexão com o servidor'
+
+                        print(text)
+
+                        if not text == self.last_line:
+                            self.last_line = text
+                            print(self.last_line)
+
+
+                        self.master.after(100, read_inputs)
+                read_inputs()
             else:
+                # stop running
                 self.running = 0
 
             self.change_main_button_run()

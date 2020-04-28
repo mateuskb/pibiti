@@ -1,9 +1,20 @@
 // Vars
 var inputs = {
-    "inp_b_rele1": 0,
-    "inp_b_rele2": 0
-};
-
+    "inp_b_rele1": "0",
+    "inp_b_rele2": "0",
+    "inp_b_rele3": "0",
+    "inp_b_rele4": "0",
+    "inp_b_rele5": "0",
+    "inp_b_rele6": "0",
+    "inp_b_rele7": "0",
+    "inp_b_rele8": "0",
+    "inp_b_rele9": "0",
+    "inp_b_rele10": "0",
+    "inp_b_rele11": "0",
+    "inp_b_rele12": "0",
+    "inp_b_rele13": "0",
+    "inp_i_fonte": "0"
+}
 
 function logout(){
     try{
@@ -44,10 +55,10 @@ function c_inputs(inputs){
         /* ------ VERIFY TOKEN ------ */
         $.getScript( "../inc/js/api/Requests.js" )
         .done(function( script, textStatus ) {
-            
             C_inputs(token, inputs).then(function(response){
                 resp = response;
                 data = resp.data;
+                console.log(data);
                 if(data.ok){
                     r = true;
                 }
@@ -172,7 +183,6 @@ $(document).ready(function () {
     $('#rele1[type=checkbox]').change(
         function(){
             resp = verify();
-            console.log(resp);
             if (resp) {
                 last_inputs = inputs;
                 if (this.checked) {
@@ -193,7 +203,6 @@ $(document).ready(function () {
     $('#rele2[type=checkbox]').change(
         function(){
             resp = verify();
-            console.log(resp);
             if (resp) {
                 last_inputs = inputs;
                 if (this.checked) {
