@@ -8,6 +8,7 @@ import ast
 
 from inc.consts.consts import *
 from inc.classes.Requests import Requests
+from inc.classes.Modulo import Modulo
 
 
 def main():
@@ -15,8 +16,9 @@ def main():
         def __init__(self, master):
             
             # var
-            self.running = 0
+            self.modulo = None
             self.last_line = ''
+            self.inputs = {}
 
             # basic information
             self.master = master
@@ -45,18 +47,19 @@ def main():
             self.title.pack(pady=30)
             self.main_button.pack(pady=20)
             self.canvas.pack(pady=0)
+            self.modulo = Modulo(run=False)
             
 
 
         def run(self):
             # run code
-            if not self.running:
+            if not self.modulo.running:
                 # start running
-                self.running = 1
+                self.modulo.start()
 
                 def read_inputs():
                     # read inputs
-                    if self.running:
+                    if self.modulo.running:
                         
                         resp = Requests.r_inputs()
                         #print(resp)
@@ -66,9 +69,12 @@ def main():
                             text = 'Erro na conexão com o servidor'
 
                         if not text == self.last_line:
-                            self.last_line = text
-                            self.update_image()
-                            #print(self.last_line)
+                            try:
+                                self.inputs = ast.literal_eval(text)
+                                self.last_line = text
+                                self.update_image()
+                            except:
+                                pass
 
 
                         self.master.after(100, read_inputs)
@@ -76,7 +82,7 @@ def main():
                 read_inputs()
             else:
                 # stop running
-                self.running = 0
+                self.modulo.stop()
 
             self.change_main_button_run()
         
@@ -95,7 +101,7 @@ def main():
             self.canvas.create_image(0, 0, image = self.module_image, anchor='nw')
 
             # light on values == '1'
-            for key, value in ast.literal_eval(self.last_line).items():
+            for key, value in self.inputs.items():
                 if key in input_element.keys():
                     if value == '1':
                         self.canvas.create_rectangle(input_element[key][0], input_element[key][1], input_element[key][0]+size_x, input_element[key][1]+size_y, fill='yellow')

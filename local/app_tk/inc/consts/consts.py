@@ -22,3 +22,5 @@ input_element = {
 # urls
 request_url = 'http://localhost/pibiti/web/back/public'
 image_url = './inc/images/modulo.png'
+
+default_inputs = {} # TO DO
