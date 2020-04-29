@@ -45,7 +45,7 @@ def main():
             self.title.pack(pady=30)
             self.main_button.pack(pady=20)
             self.canvas.pack(pady=0)
-            self.canvas.create_image(0, 0, image = self.module_image, anchor='nw')
+            
 
 
         def run(self):
@@ -68,10 +68,11 @@ def main():
                         if not text == self.last_line:
                             self.last_line = text
                             self.update_image()
-                            print(self.last_line)
+                            #print(self.last_line)
 
 
                         self.master.after(100, read_inputs)
+
                 read_inputs()
             else:
                 # stop running
@@ -88,17 +89,16 @@ def main():
                 self.main_button['text'] = 'Iniciar'
         
         def update_image(self):
-            boxes = {}
+            # delete everything in canvas
+            self.canvas.delete('all')
+            # recreate image
+            self.canvas.create_image(0, 0, image = self.module_image, anchor='nw')
+
+            # light on values == '1'
             for key, value in ast.literal_eval(self.last_line).items():
                 if key in input_element.keys():
                     if value == '1':
-                        boxes[key] = self.canvas.create_rectangle(input_element[key][0], input_element[key][1], input_element[key][0]+size_x, input_element[key][1]+size_y, fill='yellow')
-                    else:
-                        try:
-                            self.canvas.delete(boxes[key])
-                        except Exception as e:
-                            print(e)
-            print(boxes)
+                        self.canvas.create_rectangle(input_element[key][0], input_element[key][1], input_element[key][0]+size_x, input_element[key][1]+size_y, fill='yellow')
 
 
     root = tk.Tk()
