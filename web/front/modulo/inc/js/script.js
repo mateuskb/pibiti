@@ -16,6 +16,9 @@ var inputs = {
     "inp_i_fonte": "0"
 }
 
+
+//**************************FUNCTIONS****************************
+
 function logout(){
     try{
         var token = localStorage.getItem('pibiti_token');
@@ -161,25 +164,39 @@ function getinputs(){
     }
 }
 
+
+// *****************************************************************
+
+
 $(document).ready(function () {
     var resp;
     
     /*------RANGE------*/
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
 
-    slider.oninput = function() {
-        output.innerHTML = this.value;
-    }
-
-
+    
     verify();
-
-
+    
+    
     getinputs();
-
-
+    
+    
     /* UPDATE INPUTS */
+    $('#fonte').change(function() {
+        var output = document.getElementById("fonte_out");
+        output.innerHTML = this.value;
+        resp = verify();
+        if (resp) {
+            last_inputs = inputs;
+            inputs['inp_i_fonte'] = this.value;
+            resp = c_inputs(inputs);
+            
+            if (!resp) {
+                inputs = last_inputs;
+            }
+            
+        }
+    });
+
     $('#rele1[type=checkbox]').change(
         function(){
             resp = verify();
@@ -209,6 +226,226 @@ $(document).ready(function () {
                     inputs['inp_b_rele2'] = "1";
                 } else {
                     inputs['inp_b_rele2'] = "0";
+                }
+                resp = c_inputs(inputs);
+                
+                if (!resp) {
+                    inputs = last_inputs;
+                }
+                
+            }
+            
+        }
+    );
+    $('#rele3[type=checkbox]').change(
+        function(){
+            resp = verify();
+            if (resp) {
+                last_inputs = inputs;
+                if (this.checked) {
+                    inputs['inp_b_rele3'] = "1";
+                } else {
+                    inputs['inp_b_rele3'] = "0";
+                }
+                resp = c_inputs(inputs);
+                
+                if (!resp) {
+                    inputs = last_inputs;
+                }
+                
+            }
+            
+        }
+    );
+    $('#rele4[type=checkbox]').change(
+        function(){
+            resp = verify();
+            if (resp) {
+                last_inputs = inputs;
+                if (this.checked) {
+                    inputs['inp_b_rele4'] = "1";
+                } else {
+                    inputs['inp_b_rele4'] = "0";
+                }
+                resp = c_inputs(inputs);
+                
+                if (!resp) {
+                    inputs = last_inputs;
+                }
+                
+            }
+            
+        }
+    );
+    $('#rele5[type=checkbox]').change(
+        function(){
+            resp = verify();
+            if (resp) {
+                last_inputs = inputs;
+                if (this.checked) {
+                    inputs['inp_b_rele5'] = "1";
+                } else {
+                    inputs['inp_b_rele5'] = "0";
+                }
+                resp = c_inputs(inputs);
+                
+                if (!resp) {
+                    inputs = last_inputs;
+                }
+                
+            }
+            
+        }
+    );
+    $('#rele6[type=checkbox]').change(
+        function(){
+            resp = verify();
+            if (resp) {
+                last_inputs = inputs;
+                if (this.checked) {
+                    inputs['inp_b_rele6'] = "1";
+                } else {
+                    inputs['inp_b_rele6'] = "0";
+                }
+                resp = c_inputs(inputs);
+                
+                if (!resp) {
+                    inputs = last_inputs;
+                }
+                
+            }
+            
+        }
+    );
+    $('#rele7[type=checkbox]').change(
+        function(){
+            resp = verify();
+            if (resp) {
+                last_inputs = inputs;
+                if (this.checked) {
+                    inputs['inp_b_rele7'] = "1";
+                } else {
+                    inputs['inp_b_rele7'] = "0";
+                }
+                resp = c_inputs(inputs);
+                
+                if (!resp) {
+                    inputs = last_inputs;
+                }
+                
+            }
+            
+        }
+    );
+    $('#rele8[type=checkbox]').change(
+        function(){
+            resp = verify();
+            if (resp) {
+                last_inputs = inputs;
+                if (this.checked) {
+                    inputs['inp_b_rele8'] = "1";
+                } else {
+                    inputs['inp_b_rele8'] = "0";
+                }
+                resp = c_inputs(inputs);
+                
+                if (!resp) {
+                    inputs = last_inputs;
+                }
+                
+            }
+            
+        }
+    );
+    $('#rele9[type=checkbox]').change(
+        function(){
+            resp = verify();
+            if (resp) {
+                last_inputs = inputs;
+                if (this.checked) {
+                    inputs['inp_b_rele9'] = "1";
+                } else {
+                    inputs['inp_b_rele9'] = "0";
+                }
+                resp = c_inputs(inputs);
+                
+                if (!resp) {
+                    inputs = last_inputs;
+                }
+                
+            }
+            
+        }
+    );
+    $('#rele10[type=checkbox]').change(
+        function(){
+            resp = verify();
+            if (resp) {
+                last_inputs = inputs;
+                if (this.checked) {
+                    inputs['inp_b_rele10'] = "1";
+                } else {
+                    inputs['inp_b_rele10'] = "0";
+                }
+                resp = c_inputs(inputs);
+                
+                if (!resp) {
+                    inputs = last_inputs;
+                }
+                
+            }
+            
+        }
+    );
+    $('#rele11[type=checkbox]').change(
+        function(){
+            resp = verify();
+            if (resp) {
+                last_inputs = inputs;
+                if (this.checked) {
+                    inputs['inp_b_rele11'] = "1";
+                } else {
+                    inputs['inp_b_rele11'] = "0";
+                }
+                resp = c_inputs(inputs);
+                
+                if (!resp) {
+                    inputs = last_inputs;
+                }
+                
+            }
+            
+        }
+    );
+    $('#rele12[type=checkbox]').change(
+        function(){
+            resp = verify();
+            if (resp) {
+                last_inputs = inputs;
+                if (this.checked) {
+                    inputs['inp_b_rele12'] = "1";
+                } else {
+                    inputs['inp_b_rele12'] = "0";
+                }
+                resp = c_inputs(inputs);
+                
+                if (!resp) {
+                    inputs = last_inputs;
+                }
+                
+            }
+            
+        }
+    );
+    $('#rele13[type=checkbox]').change(
+        function(){
+            resp = verify();
+            if (resp) {
+                last_inputs = inputs;
+                if (this.checked) {
+                    inputs['inp_b_rele13'] = "1";
+                } else {
+                    inputs['inp_b_rele13'] = "0";
                 }
                 resp = c_inputs(inputs);
                 
