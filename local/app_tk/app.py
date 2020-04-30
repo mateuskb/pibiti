@@ -102,9 +102,12 @@ def main():
 
             # light on values == '1'
             for key, value in self.inputs.items():
-                if key in input_element.keys():
-                    if value == '1':
-                        self.canvas.create_rectangle(input_element[key][0], input_element[key][1], input_element[key][0]+size_x, input_element[key][1]+size_y, fill='yellow')
+                if key == "inp_i_fonte":
+                     self.canvas.create_text(input_element[key][0], input_element[key][1], fill="darkblue",font="Times 16 italic bold",text=value)                    
+                else:
+                    if key in input_element.keys():
+                        if value == '1':
+                            self.canvas.create_rectangle(input_element[key][0], input_element[key][1], input_element[key][0]+size_x, input_element[key][1]+size_y, fill='yellow')
 
 
     root = tk.Tk()

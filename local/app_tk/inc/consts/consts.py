@@ -7,16 +7,25 @@ resolution = 800, 800
 size_x = 11
 size_y = 60
 input_element = {
-    "inp_i_fonte" : [274, 135],
-    "inp_b_rele1" : [274, 135],
-    "inp_b_rele2" : [274, 235],
-    "inp_b_rele3" : [274, 339],
-    "inp_b_rele4" : [274, 135],
-    "inp_b_rele5" : [274, 235],
-    "inp_b_rele6" : [274, 339],
-    "inp_b_rele7" : [274, 135],
-    "inp_b_rele8" : [274, 235],
-    "inp_b_rele9" : [274, 339]
+    # fonte
+    "inp_i_fonte" : [114, 265],
+    # outros
+    "inp_b_rele1" : [134, 135],
+    "inp_b_rele2" : [274, 50],
+    "inp_b_rele3" : [414, 50],
+    "inp_b_rele4" : [554, 50],
+    # first line
+    "inp_b_rele5" : [274, 135],
+    "inp_b_rele6" : [274, 235],
+    "inp_b_rele7" : [274, 339],
+    # second line
+    "inp_b_rele8" : [414, 135],
+    "inp_b_rele9" : [417, 235],
+    "inp_b_rele10" : [420, 339],
+    # third line
+    "inp_b_rele11" : [554, 135],
+    "inp_b_rele12" : [558, 235],
+    "inp_b_rele13" : [562, 339],
 }
 
 # urls
