@@ -1,22 +1,3 @@
-// Vars
-var inputs = {
-    "inp_b_rele1": "0",
-    "inp_b_rele2": "0",
-    "inp_b_rele3": "0",
-    "inp_b_rele4": "0",
-    "inp_b_rele5": "0",
-    "inp_b_rele6": "0",
-    "inp_b_rele7": "0",
-    "inp_b_rele8": "0",
-    "inp_b_rele9": "0",
-    "inp_b_rele10": "0",
-    "inp_b_rele11": "0",
-    "inp_b_rele12": "0",
-    "inp_b_rele13": "0",
-    "inp_i_fonte": "0"
-}
-
-
 //**************************FUNCTIONS****************************
 
 function logout(){
@@ -142,11 +123,25 @@ function getinputs(){
 
                 if(data.ok){
                     data = data.data;
+                    for (let key in inputs) {
+                        inputs[key] = data[key];
+                        console.log('Key: ', key);
+                        console.log('Value: ', inputs[key]);
+                        if ( key == 'inp_i_fonte'){
+                            $("#inp_i_fonte").attr("value", inputs[key]);
+                            var output = document.getElementById("fonte_out");
+                            output.innerHTML = inputs[key];
+                        }else{
+                            (inputs[key]==1) ? $("#"+key).attr("checked", true ): $("#"+key).attr("checked", false );
+                        }
+                    }
+                    
+                    /*
                     inputs['inp_b_rele1'] = data['inp_b_rele1'];
                     inputs['inp_b_rele2'] = data['inp_b_rele2'];
                     (inputs['inp_b_rele1']==1) ? $("#rele1").attr("checked", true ): $("#rele1").attr("checked", false );
                     (inputs['inp_b_rele2']==1) ? $("#rele2").attr("checked", true ): $("#rele2").attr("checked", false );
-                
+                    */
                 }
             }).catch((error)=>{
                 console.log(error);
@@ -181,7 +176,7 @@ $(document).ready(function () {
     
     
     /* UPDATE INPUTS */
-    $('#fonte').change(function() {
+    $('#inp_i_fonte').change(function() {
         var output = document.getElementById("fonte_out");
         output.innerHTML = this.value;
         resp = verify();
@@ -197,7 +192,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#rele1[type=checkbox]').change(
+    $('#inp_b_rele1[type=checkbox]').change(
         function(){
             resp = verify();
             if (resp) {
@@ -217,7 +212,7 @@ $(document).ready(function () {
             
         }
     );
-    $('#rele2[type=checkbox]').change(
+    $('#inp_b_rele2[type=checkbox]').change(
         function(){
             resp = verify();
             if (resp) {
@@ -237,7 +232,7 @@ $(document).ready(function () {
             
         }
     );
-    $('#rele3[type=checkbox]').change(
+    $('#inp_b_rele3[type=checkbox]').change(
         function(){
             resp = verify();
             if (resp) {
@@ -257,7 +252,7 @@ $(document).ready(function () {
             
         }
     );
-    $('#rele4[type=checkbox]').change(
+    $('#inp_b_rele4[type=checkbox]').change(
         function(){
             resp = verify();
             if (resp) {
@@ -277,7 +272,7 @@ $(document).ready(function () {
             
         }
     );
-    $('#rele5[type=checkbox]').change(
+    $('#inp_b_rele5[type=checkbox]').change(
         function(){
             resp = verify();
             if (resp) {
@@ -297,7 +292,7 @@ $(document).ready(function () {
             
         }
     );
-    $('#rele6[type=checkbox]').change(
+    $('#inp_b_rele6[type=checkbox]').change(
         function(){
             resp = verify();
             if (resp) {
@@ -317,7 +312,7 @@ $(document).ready(function () {
             
         }
     );
-    $('#rele7[type=checkbox]').change(
+    $('#inp_b_rele7[type=checkbox]').change(
         function(){
             resp = verify();
             if (resp) {
@@ -337,7 +332,7 @@ $(document).ready(function () {
             
         }
     );
-    $('#rele8[type=checkbox]').change(
+    $('#inp_b_rele8[type=checkbox]').change(
         function(){
             resp = verify();
             if (resp) {
@@ -357,7 +352,7 @@ $(document).ready(function () {
             
         }
     );
-    $('#rele9[type=checkbox]').change(
+    $('#inp_b_rele9[type=checkbox]').change(
         function(){
             resp = verify();
             if (resp) {
@@ -377,7 +372,7 @@ $(document).ready(function () {
             
         }
     );
-    $('#rele10[type=checkbox]').change(
+    $('#inp_b_rele10[type=checkbox]').change(
         function(){
             resp = verify();
             if (resp) {
@@ -397,7 +392,7 @@ $(document).ready(function () {
             
         }
     );
-    $('#rele11[type=checkbox]').change(
+    $('#inp_b_rele11[type=checkbox]').change(
         function(){
             resp = verify();
             if (resp) {
@@ -417,7 +412,7 @@ $(document).ready(function () {
             
         }
     );
-    $('#rele12[type=checkbox]').change(
+    $('#inp_b_rele12[type=checkbox]').change(
         function(){
             resp = verify();
             if (resp) {
@@ -437,7 +432,7 @@ $(document).ready(function () {
             
         }
     );
-    $('#rele13[type=checkbox]').change(
+    $('#inp_b_rele13[type=checkbox]').change(
         function(){
             resp = verify();
             if (resp) {
