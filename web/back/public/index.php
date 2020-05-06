@@ -80,4 +80,12 @@ $app->post('/c_inputs', function (Request $request, Response $response, $args) {
     return $response;
 });
 
+$app->post('/negate', function (Request $request, Response $response, $args) {
+    $input = json_decode($request->getBody(), true);
+    $resp = (new InputsDb())->negate($input);
+    $response->getBody()->write(json_encode($resp));
+    //$response->getBody()->write(json_encode($payload));
+    return $response;
+});
+
 $app->run();

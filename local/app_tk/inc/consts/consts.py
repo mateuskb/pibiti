@@ -34,4 +34,4 @@ image_url = './inc/images/modulo.png'
 
 default_inputs = {} # TO DO
 
-server_key = 'dnady8u231tyge762r23rug378hui23h2#@$332gh7f2ne' # Usado para cancelar inputs caso não forem permitidos
+server_hash = '$2y$12$YUehdI4CZ9wh4B8za.Tz5e6j0Zk.OJLmOl.EtzCiQpxA4zsHfA.cK' # Usado para cancelar inputs caso não forem permitidos

@@ -31,3 +31,24 @@ class Requests:
             text = f'Error: {e}'
         
         return text
+
+    @staticmethod
+    def negate(id_input):
+        url = request_url + '/negate'
+
+        try:
+            inputs = {"hash": server_hash, "idInput": id_input}
+            resp = requests.request("POST", url, data = json.dumps(inputs))
+            status = resp.status_code
+            resp = resp.json()
+            print(resp)
+            if resp['ok']:
+                text = resp['data']
+            else:
+                text = resp['errors']
+
+            text['status'] = status
+        except Exception as e:
+            text = f'Error: {e}'
+        
+        return text

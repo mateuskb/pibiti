@@ -30,10 +30,14 @@ class Modulo:
     def update_inputs(self, inputs):
         if self.__verify_inputs(inputs):
             return True
+        else:
+            return False
 
     def stop(self):
         self.running = False
         return True
 
     def __verify_inputs(self, inputs):
+        if inputs['inp_b_rele1'] == '1':
+            return False
         return True

@@ -81,6 +81,79 @@ class InputsDb {
         return $data;
     }
 
+    public function negate($input){
+        
+        $in_transaction = false;
+        $id_input = 0;
+        $hash = '';
+
+        $data = [
+            'ok'=>false,
+            'errors'=>[],
+            'data'=>false
+        ];
+        // $data['input'] = $input;
+
+        if($this->conn->inTransaction()):
+            $in_transaction = true;
+        endif;
+
+        if(isset($input)){
+            $id_input = array_key_exists("idInput",$input) ? $input['idInput'] : 0;
+            $hash = array_key_exists("hash",$input) ? $input['hash'] : '';
+        };
+        //$data['hash'] = $hash;
+
+        if($id_input < 1):
+            $data['errors']['idInput'] = 'Input não identificado.';
+        endif;
+
+        if(!password_verify(APP_NEGATE_KEY, $hash)):
+            $data['errors']['password'] = 'Senha inválida.'; 
+        endif;
+
+        if (empty($data['errors'])):
+            
+            try{
+                $dt_now = (new DateTime('now', new DateTimeZone("UTC")));
+                $dt_now = $dt_now->format("Y-m-d h:i:s");
+
+                if(!$in_transaction):
+                    $this->conn->beginTransaction();
+                endif;
+
+                $sql = "
+                    DELETE FROM
+                        inputs 
+                    WHERE 
+                        inp_pk = :id_input
+
+                    ;
+                ";
+                $stmt = $this->conn->prepare($sql);
+                $stmt->bindValue(':id_input', $id_input, PDO::PARAM_STR);
+                $stmt->execute();
+
+            } catch (Exception $e){
+                $data['errors']['conn'] = "Erro na conexão com o banco de dados: " . $e;
+            }
+            
+            if(empty($data['errors'])):
+                $data['ok'] = true;
+                $data['data'] = true;
+                if(!$in_transaction):
+                    $this->conn->commit();
+                endif;
+            else:
+                if(!$in_transaction):
+                    $this->conn->rollback(); 
+                endif;
+            endif;
+
+        endif;
+        return $data;
+    }
+
     public function c_inputs($input) {
         // Vars
         $id_usuario = 0;

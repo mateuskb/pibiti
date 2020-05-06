@@ -36,4 +36,6 @@
             "inp_i_fonte"
         ]
     );
+
+    define("APP_NEGATE_KEY", "ServerNegatePassWord");
     

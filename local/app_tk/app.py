@@ -65,14 +65,16 @@ def main():
                         #print(resp)
                         if resp:
                             text = str(resp)
-                        else:
-                            text = 'Erro na conexão com o servidor'
 
                         if not text == self.last_line:
                             try:
                                 self.inputs = ast.literal_eval(text)
                                 self.last_line = text
-                                self.update_image()
+                                resp = self.modulo.update_inputs(self.inputs)
+                                if resp:
+                                        self.update_image()
+                                else:
+                                    Requests.negate(self.inputs['inp_pk'])
                             except:
                                 pass
 
