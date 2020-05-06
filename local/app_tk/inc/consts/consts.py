@@ -33,3 +33,5 @@ request_url = 'http://localhost/pibiti/web/back/public'
 image_url = './inc/images/modulo.png'
 
 default_inputs = {} # TO DO
+
+server_key = 'dnady8u231tyge762r23rug378hui23h2#@$332gh7f2ne' # Usado para cancelar inputs caso não forem permitidos

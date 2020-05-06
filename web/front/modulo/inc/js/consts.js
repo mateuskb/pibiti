@@ -14,5 +14,3 @@ var inputs = {
     "inp_b_rele13": "0",
     "inp_i_fonte": "0"
 }
-
-var server_key = 'dnady8u231tyge762r23rug378hui23h2#@$332gh7f2ne'; // Usado para cancelar inputs caso não forem permitidos
