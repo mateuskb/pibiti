@@ -15,7 +15,12 @@
     <script src='../inc/js/api/consts.js'></script>
     <script src='inc/js/script.js'></script>
     <script src='inc/js/consts.js'></script>
-    
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+    <script type="text/javascript">
+        new Twitch.Player("twitch-embed", {
+          channel: "mateuskb"
+        });
+    </script>
 
 </head>
 <html lang='pt-br'>
@@ -30,72 +35,168 @@
             <div class="row">
                 <div class="col-sm-8">
                     <div class="live">
-                        <iframe
-                            src="https://player.twitch.tv/?channel=mateuskb"
-                            scrolling="no"
-                            width="100%"
-                            height="100%">
+                        <iframe 
+                            src="https://player.twitch.tv/?channel=mateuskb&parent= " 
+                            frameborder="0"    
+                            allowfullscreen="true" 
+                            scrolling="no" 
+                            height="100%" 
+                            width="100%">
                         </iframe>
-                    </div>
+                    </div>      
                 </div>
                 <div class="col-sm-4">
+                    <h2>Controle</h2>
                     <div class="control">
                         <div class="slidecontainer">
-                            <input type="range" min="15" max="30" class="ranger" id="inp_i_fonte">
-                            <h3 id="fonte_out">15</h3>
+                            <p class='inputText'>Fonte</p>
+                            <input type="range" min="15" max="30" class="ranger w-80" id="inp_i_fonte">
+                            <p id="fonte_out" class="inputText font-output">15</p>
                         </div>
-                        <label class="switch">
-                            <input type="checkbox" id='inp_b_rele1'>
-                            <span class="slider"></span>
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" id='inp_b_rele2'>
-                            <span class="slider"></span>
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" id='inp_b_rele3'>
-                            <span class="slider"></span>
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" id='inp_b_rele4'>
-                            <span class="slider"></span>
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" id='inp_b_rele5'>
-                            <span class="slider"></span>
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" id='inp_b_rele6'>
-                            <span class="slider"></span>
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" id='inp_b_rele7'>
-                            <span class="slider"></span>
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" id='inp_b_rele8'>
-                            <span class="slider"></span>
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" id='inp_b_rele9'>
-                            <span class="slider"></span>
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" id='inp_b_rele10'>
-                            <span class="slider"></span>
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" id='inp_b_rele11'>
-                            <span class="slider"></span>
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" id='inp_b_rele12'>
-                            <span class="slider"></span>
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" id='inp_b_rele13'>
-                            <span class="slider"></span>
-                        </label>
+                        
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class='inputText'>Rele 01</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <label class="switch">
+                                    <input type="checkbox" id='inp_b_rele1'>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class='inputText'>Rele 02</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <label class="switch">
+                                    <input type="checkbox" id='inp_b_rele2'>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class='inputText'>Rele 03</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <label class="switch">
+                                    <input type="checkbox" id='inp_b_rele3'>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class='inputText'>Rele 04</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <label class="switch">
+                                    <input type="checkbox" id='inp_b_rele4'>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class='inputText'>Rele 05</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <label class="switch">
+                                    <input type="checkbox" id='inp_b_rele5'>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class='inputText'>Rele 06</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <label class="switch">
+                                    <input type="checkbox" id='inp_b_rele6'>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class='inputText'>Rele 07</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <label class="switch">
+                                    <input type="checkbox" id='inp_b_rele7'>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class='inputText'>Rele 08</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <label class="switch">
+                                    <input type="checkbox" id='inp_b_rele8'>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class='inputText'>Rele 09</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <label class="switch">
+                                    <input type="checkbox" id='inp_b_rele9'>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class='inputText'>Rele 10</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <label class="switch">
+                                    <input type="checkbox" id='inp_b_rele10'>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class='inputText'>Rele 11</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <label class="switch">
+                                    <input type="checkbox" id='inp_b_rele11'>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class='inputText'>Rele 12</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <label class="switch">
+                                    <input type="checkbox" id='inp_b_rele12'>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class='inputText'>Rele 13</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <label class="switch">
+                                    <input type="checkbox" id='inp_b_rele13'>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

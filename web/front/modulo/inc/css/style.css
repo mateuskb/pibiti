@@ -50,6 +50,7 @@ h2 {
     word-spacing: 2px;
     text-align: center;
     margin-bottom: 40px;
+    color: #fff;
 }
 
 h3 {
@@ -225,3 +226,14 @@ iframe {
     transform: translateX(26px);
   }
   
+.ranger {
+    width: 80%;
+    float: left;
+    margin-right: 20px;
+}
+/* text */
+
+.inputText {
+    color: #fff;
+    font-size: 120%;
+}
