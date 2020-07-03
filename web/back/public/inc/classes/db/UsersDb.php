@@ -95,7 +95,7 @@ class UserDb {
                         $data['errors']['hash'] = 'Hash não identificado! Por favor, entre em contato.';
                     endif;
                     
-                    //$data['date'] = date("Y-m-d h:i:s");
+                    //$data['date'] = date("Y-m-d H:i:s");
                     // $data['resp'] = $resp;
                     // $data['hash'] = $hash;
                     // $data['password'] = $password;
@@ -108,9 +108,9 @@ class UserDb {
                     if(empty($data['errors'])):
         
                         $dt_now = (new DateTime('now', new DateTimeZone("UTC")));
-                        $dt_now = $dt_now->format("Y-m-d h:i:s");
+                        $dt_now = $dt_now->format("Y-m-d H:i:s");
                         $dt_now_verifier = (new DateTime('now', new DateTimeZone("UTC")))->modify(TIME_VERIFIER ." minutes");
-                        $dt_now_verifier = $dt_now_verifier->format("Y-m-d h:i:s");
+                        $dt_now_verifier = $dt_now_verifier->format("Y-m-d H:i:s");
                         
                         $sql = "
                             SELECT 
@@ -364,9 +364,9 @@ class UserDb {
                     $this->conn->beginTransaction();
 
                     $dt_now = (new DateTime('now', new DateTimeZone("UTC")));
-                    $dt_now = $dt_now->format("Y-m-d h:i:s");
+                    $dt_now = $dt_now->format("Y-m-d H:i:s");
                     $dt_now_verifier = (new DateTime('now', new DateTimeZone("UTC")))->modify(TIME_VERIFIER ." minutes");
-                    $dt_now_verifier = $dt_now_verifier->format("Y-m-d h:i:s");
+                    $dt_now_verifier = $dt_now_verifier->format("Y-m-d H:i:s");
                     
                     $sql = "
                         SELECT 
@@ -441,9 +441,9 @@ class UserDb {
 
         if(empty($data['errors'])):
             $dt_now = (new DateTime('now', new DateTimeZone("UTC")));
-            $dt_now = $dt_now->format("Y-m-d h:i:s");
+            $dt_now = $dt_now->format("Y-m-d H:i:s");
             $dt_now_verifier = (new DateTime('now', new DateTimeZone("UTC")))->modify(TIME_VERIFIER ." minutes");
-            $dt_now_verifier = $dt_now_verifier->format("Y-m-d h:i:s");
+            $dt_now_verifier = $dt_now_verifier->format("Y-m-d H:i:s");
                                 
             if(!isset($this->conn)):
                 $data['errors']['conn'] = 'Erro na conexão com o banco de dados!';
@@ -527,7 +527,7 @@ class UserDb {
 
         try{
             $dt_now = (new DateTime('now', new DateTimeZone("UTC")));
-            $dt_now = $dt_now->format("Y-m-d h:i:s");
+            $dt_now = $dt_now->format("Y-m-d H:i:s");
 
             if(!$in_transaction):
                 $this->conn->beginTransaction();
