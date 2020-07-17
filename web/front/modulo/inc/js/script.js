@@ -45,6 +45,11 @@ function c_inputs(inputs){
                 console.log(data);
                 if(data.ok){
                     r = true;
+                } else {
+                    for (let key in data.errors){
+                        error = data.errors[key];
+                        alert(error);
+                    }
                 }
             }).catch((error)=>{
                 //console.log(error);
@@ -128,20 +133,18 @@ function getinputs(){
                         console.log('Key: ', key);
                         console.log('Value: ', inputs[key]);
                         if ( key == 'inp_i_fonte'){
-                            $("#inp_i_fonte").attr("value", inputs[key]);
+                            $("#inp_i_fonte").val(inputs[key]);
                             var output = document.getElementById("fonte_out");
                             output.innerHTML = inputs[key];
                         }else{
-                            (inputs[key]==1) ? $("#"+key).attr("checked", true ): $("#"+key).attr("checked", false );
+                            (inputs[key]==1) ? $("#"+key).prop("checked", true ): $("#"+key).prop("checked", false );
                         }
+                    } 
+                } else {
+                    for (let key in data.errors){
+                        error = data.errors[key];
+                        alert(error);
                     }
-                    
-                    /*
-                    inputs['inp_b_rele1'] = data['inp_b_rele1'];
-                    inputs['inp_b_rele2'] = data['inp_b_rele2'];
-                    (inputs['inp_b_rele1']==1) ? $("#rele1").attr("checked", true ): $("#rele1").attr("checked", false );
-                    (inputs['inp_b_rele2']==1) ? $("#rele2").attr("checked", true ): $("#rele2").attr("checked", false );
-                    */
                 }
             }).catch((error)=>{
                 console.log(error);
@@ -188,6 +191,7 @@ $(document).ready(function () {
             if (!resp) {
                 inputs = last_inputs;
             }
+            getinputs()
             
         }
     });
@@ -207,7 +211,7 @@ $(document).ready(function () {
                 if (!resp) {
                     inputs = last_inputs;
                 }
-                
+                getinputs()
             }
             
         }
@@ -227,7 +231,7 @@ $(document).ready(function () {
                 if (!resp) {
                     inputs = last_inputs;
                 }
-                
+                getinputs()
             }
             
         }
@@ -247,7 +251,7 @@ $(document).ready(function () {
                 if (!resp) {
                     inputs = last_inputs;
                 }
-                
+                getinputs()
             }
             
         }
@@ -267,7 +271,7 @@ $(document).ready(function () {
                 if (!resp) {
                     inputs = last_inputs;
                 }
-                
+                getinputs()
             }
             
         }
@@ -287,7 +291,7 @@ $(document).ready(function () {
                 if (!resp) {
                     inputs = last_inputs;
                 }
-                
+                getinputs()
             }
             
         }
@@ -307,7 +311,7 @@ $(document).ready(function () {
                 if (!resp) {
                     inputs = last_inputs;
                 }
-                
+                getinputs()
             }
             
         }
@@ -327,7 +331,7 @@ $(document).ready(function () {
                 if (!resp) {
                     inputs = last_inputs;
                 }
-                
+                getinputs()
             }
             
         }
@@ -347,7 +351,7 @@ $(document).ready(function () {
                 if (!resp) {
                     inputs = last_inputs;
                 }
-                
+                getinputs()
             }
             
         }
@@ -367,7 +371,7 @@ $(document).ready(function () {
                 if (!resp) {
                     inputs = last_inputs;
                 }
-                
+                getinputs()
             }
             
         }
@@ -387,7 +391,7 @@ $(document).ready(function () {
                 if (!resp) {
                     inputs = last_inputs;
                 }
-                
+                getinputs()
             }
             
         }
@@ -407,7 +411,7 @@ $(document).ready(function () {
                 if (!resp) {
                     inputs = last_inputs;
                 }
-                
+                getinputs()
             }
             
         }
@@ -427,7 +431,7 @@ $(document).ready(function () {
                 if (!resp) {
                     inputs = last_inputs;
                 }
-                
+                getinputs()
             }
             
         }
@@ -447,7 +451,7 @@ $(document).ready(function () {
                 if (!resp) {
                     inputs = last_inputs;
                 }
-                
+                getinputs()
             }
             
         }

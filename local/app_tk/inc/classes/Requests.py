@@ -41,7 +41,6 @@ class Requests:
             resp = requests.request("POST", url, data = json.dumps(inputs))
             status = resp.status_code
             resp = resp.json()
-            print(resp)
             if resp['ok']:
                 text = resp['data']
             else:

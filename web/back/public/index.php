@@ -15,6 +15,8 @@ require_once($classes_url.'/lib/HttpLib.php');
 require_once($classes_url.'/db/UsersDb.php');
 require_once($classes_url.'/db/InputsDb.php');
 
+$resp = "";
+
 # Starting App
 $app = AppFactory::create();
 
@@ -63,7 +65,7 @@ $app->get('/verify', function (Request $request, Response $response, $args) {
 });
 
 $app->get('/getInputs', function (Request $request, Response $response, $args) {
-    $resp = (new InputsDb())->get_inputs($input);
+    $resp = (new InputsDb())->get_inputs();
     $response->getBody()->write(json_encode($resp));
     //$response->getBody()->write(json_encode($payload));
     return $response;

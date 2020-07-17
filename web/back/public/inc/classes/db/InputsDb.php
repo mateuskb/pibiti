@@ -154,6 +154,36 @@ class InputsDb {
         return $data;
     }
 
+    public function verify($input){
+        $inputs = [];
+
+        $data = [
+            'ok'=>false,
+            'errors'=>[],
+            'data'=>false
+        ];
+        // $data['input'] = $input;
+
+        if(isset($input)){
+            $inputs = array_key_exists("inputs",$input) ? $input['inputs'] : [];
+        };
+        //$data['hash'] = $hash;
+
+        if (empty($data['errors'])):
+            
+            // TO DO
+            // $data['errors']['simulador'] = "Teste de erro simulado";
+            
+        endif;
+        
+        if(empty($data['errors'])):
+            $data['ok'] = true;
+            $data['data'] = true;
+        endif;
+        
+        return $data;
+    }
+
     public function c_inputs($input) {
         // Vars
         $id_usuario = 0;
@@ -196,6 +226,13 @@ class InputsDb {
 
             if (!$resp['ok'] & !$resp['data']):
                 $data['errors']['404'] = "Usuário inválido.";
+            endif;
+
+            
+            $resp = $this->verify($inputs);
+
+            if (!$resp['ok'] & !$resp['data']):
+                $data['errors']['inputs'] = "Inputs poderiam causar um dano ao módulo.";
             endif;
 
             if(empty($data['errors'])):
@@ -244,20 +281,20 @@ class InputsDb {
                             
                         ';
                         $stmt = $this->conn->prepare($sql);
-                        $stmt->bindValue(':inp_b_rele1', $inputs['inp_b_rele1']);                        
-                        $stmt->bindValue(':inp_b_rele2', $inputs['inp_b_rele2']);                        
-                        $stmt->bindValue(':inp_b_rele3', $inputs['inp_b_rele3']);                        
-                        $stmt->bindValue(':inp_b_rele4', $inputs['inp_b_rele4']);                        
-                        $stmt->bindValue(':inp_b_rele5', $inputs['inp_b_rele5']);                        
-                        $stmt->bindValue(':inp_b_rele6', $inputs['inp_b_rele6']);                        
-                        $stmt->bindValue(':inp_b_rele7', $inputs['inp_b_rele7']);                        
-                        $stmt->bindValue(':inp_b_rele8', $inputs['inp_b_rele8']);                        
-                        $stmt->bindValue(':inp_b_rele9', $inputs['inp_b_rele9']);                        
-                        $stmt->bindValue(':inp_b_rele10', $inputs['inp_b_rele10']);                        
-                        $stmt->bindValue(':inp_b_rele11', $inputs['inp_b_rele11']);                        
-                        $stmt->bindValue(':inp_b_rele12', $inputs['inp_b_rele12']);                        
-                        $stmt->bindValue(':inp_b_rele13', $inputs['inp_b_rele13']);                        
-                        $stmt->bindValue(':inp_i_fonte', $inputs['inp_i_fonte']);                        
+                        $stmt->bindValue(':inp_b_rele1', $inputs['inp_b_rele1'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_b_rele2', $inputs['inp_b_rele2'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_b_rele3', $inputs['inp_b_rele3'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_b_rele4', $inputs['inp_b_rele4'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_b_rele5', $inputs['inp_b_rele5'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_b_rele6', $inputs['inp_b_rele6'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_b_rele7', $inputs['inp_b_rele7'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_b_rele8', $inputs['inp_b_rele8'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_b_rele9', $inputs['inp_b_rele9'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_b_rele10', $inputs['inp_b_rele10'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_b_rele11', $inputs['inp_b_rele11'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_b_rele12', $inputs['inp_b_rele12'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_b_rele13', $inputs['inp_b_rele13'], PDO::PARAM_INT);                        
+                        $stmt->bindValue(':inp_i_fonte', $inputs['inp_i_fonte'], PDO::PARAM_INT);                        
                         $stmt->execute();
                     
                     } catch (Exception $e){
