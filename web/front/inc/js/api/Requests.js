@@ -202,14 +202,29 @@ async function Getinputs(token) {
 }
 
 async function C_inputs(token, inputs) {
-
+    // console.log(inputs);
     // alert(auth);
     const config = {
         method: 'post',
         url: URL_PATH + '/c_inputs',
         headers: { 'Authorization': 'Bearer ' + token },
         data: {
-            "inputs": inputs
+            "inputs": {
+                "inp_b_rele1": inputs["inp_b_rele1"],
+                "inp_b_rele2": inputs["inp_b_rele2"],
+                "inp_b_rele3": inputs["inp_b_rele3"],
+                "inp_b_rele4": inputs["inp_b_rele4"],
+                "inp_b_rele5": inputs["inp_b_rele5"],
+                "inp_b_rele6": inputs["inp_b_rele6"],
+                "inp_b_rele7": inputs["inp_b_rele7"],
+                "inp_b_rele8": inputs["inp_b_rele8"],
+                "inp_b_rele9": inputs["inp_b_rele9"],
+                "inp_b_rele10": inputs["inp_b_rele10"],
+                "inp_b_rele11": inputs["inp_b_rele11"],
+                "inp_b_rele12": inputs["inp_b_rele12"],
+                "inp_b_rele13": inputs["inp_b_rele13"],
+                "inp_i_fonte": inputs["inp_i_fonte"]
+            }
         }
 
     }

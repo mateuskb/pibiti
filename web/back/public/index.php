@@ -2,6 +2,7 @@
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Factory\AppFactory;
+use Tuupola\Middleware\CorsMiddleware;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -15,8 +16,21 @@ require_once($classes_url.'/lib/HttpLib.php');
 require_once($classes_url.'/db/UsersDb.php');
 require_once($classes_url.'/db/InputsDb.php');
 
+$resp = "";
+
 # Starting App
 $app = AppFactory::create();
+
+
+$app->add(new Tuupola\Middleware\CorsMiddleware([
+    "origin" => ["http://localhost", "http://appfeliz.com.br", "https://appfeliz.com.br"],
+    "methods" => ["GET", "POST", "PATCH", "DELETE", "OPTIONS"],    
+    "headers.allow" => ["Origin", "Content-Type", "Authorization", "Accept", "ignoreLoadingBar", "X-Requested-With", "Access-Control-Allow-Origin"],
+    "headers.expose" => [],
+    "credentials" => true,
+    "cache" => 0,        
+]));
+
 
 $app->setBasePath("/pibiti/web/back/public");
 
@@ -63,7 +77,7 @@ $app->get('/verify', function (Request $request, Response $response, $args) {
 });
 
 $app->get('/getInputs', function (Request $request, Response $response, $args) {
-    $resp = (new InputsDb())->get_inputs($input);
+    $resp = (new InputsDb())->get_inputs();
     $response->getBody()->write(json_encode($resp));
     //$response->getBody()->write(json_encode($payload));
     return $response;

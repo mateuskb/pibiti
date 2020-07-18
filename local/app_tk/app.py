@@ -62,7 +62,7 @@ def main():
                     if self.modulo.running:
                         
                         resp = Requests.r_inputs()
-                        #print(resp)
+                        # print(resp)
                         if resp:
                             text = str(resp)
 
@@ -72,14 +72,14 @@ def main():
                                 self.last_line = text
                                 resp = self.modulo.update_inputs(self.inputs)
                                 if resp:
-                                        self.update_image()
+                                    self.update_image()
                                 else:
                                     Requests.negate(self.inputs['inp_pk'])
                             except:
                                 pass
 
 
-                        self.master.after(100, read_inputs)
+                        self.master.after(250, read_inputs)
 
                 read_inputs()
             else:

@@ -28,9 +28,12 @@ class Modulo:
         return True
 
     def update_inputs(self, inputs):
-        if self.__verify_inputs(inputs):
-            return True
-        else:
+        if self.running:
+            if self.__verify_inputs(inputs):
+                return True
+            else:
+                return False
+        else: 
             return False
 
     def stop(self):

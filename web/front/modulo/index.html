@@ -3,11 +3,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="../modulo/inc/vendor/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="../modulo/inc/vendor/bootstrap.min.js"></script>
+    <script src="../modulo/inc/vendor/jquery.min.js"></script>
     
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../modulo/inc/vendor/axios.min.js"></script>
     
     <!--<link href="./inc/css/grid.css" rel="stylesheet">-->
     <link href="./inc/css/style.css" rel="stylesheet">
@@ -33,10 +33,10 @@
     <section id="main" class="mt-4">
         <div class="container-fluid ">
             <div class="row">
-                <div class="col-sm-8">
-                    <div class="live">
+                <div class="col-sm-12">
+                    <div class="live twitch-embed">
                         <iframe 
-                            src="https://player.twitch.tv/?channel=mateuskb&parent= " 
+                            src="https://player.twitch.tv/?channel=mateuskb&parent=localhost" 
                             frameborder="0"    
                             allowfullscreen="true" 
                             scrolling="no" 
@@ -45,7 +45,9 @@
                         </iframe>
                     </div>      
                 </div>
-                <div class="col-sm-4">
+            </div>
+            <div class="row">
+                <div class="col-sm-8 ml-auto mr-auto mt-4">
                     <h2>Controle</h2>
                     <div class="control">
                         <div class="slidecontainer">
@@ -55,10 +57,10 @@
                         </div>
                         
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-6">
                                 <p class='inputText'>Rele 01</p>
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-6">
                                 <label class="switch">
                                     <input type="checkbox" id='inp_b_rele1'>
                                     <span class="slider"></span>
@@ -66,10 +68,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-6">
                                 <p class='inputText'>Rele 02</p>
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-6">
                                 <label class="switch">
                                     <input type="checkbox" id='inp_b_rele2'>
                                     <span class="slider"></span>
@@ -77,10 +79,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-6">
                                 <p class='inputText'>Rele 03</p>
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-6">
                                 <label class="switch">
                                     <input type="checkbox" id='inp_b_rele3'>
                                     <span class="slider"></span>
@@ -88,10 +90,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-6">
                                 <p class='inputText'>Rele 04</p>
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-6">
                                 <label class="switch">
                                     <input type="checkbox" id='inp_b_rele4'>
                                     <span class="slider"></span>
@@ -99,10 +101,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-6">
                                 <p class='inputText'>Rele 05</p>
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-6">
                                 <label class="switch">
                                     <input type="checkbox" id='inp_b_rele5'>
                                     <span class="slider"></span>
@@ -110,10 +112,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-6">
                                 <p class='inputText'>Rele 06</p>
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-6">
                                 <label class="switch">
                                     <input type="checkbox" id='inp_b_rele6'>
                                     <span class="slider"></span>
@@ -121,10 +123,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-6">
                                 <p class='inputText'>Rele 07</p>
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-6">
                                 <label class="switch">
                                     <input type="checkbox" id='inp_b_rele7'>
                                     <span class="slider"></span>
@@ -132,10 +134,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-6">
                                 <p class='inputText'>Rele 08</p>
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-6">
                                 <label class="switch">
                                     <input type="checkbox" id='inp_b_rele8'>
                                     <span class="slider"></span>
@@ -143,10 +145,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-6">
                                 <p class='inputText'>Rele 09</p>
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-6">
                                 <label class="switch">
                                     <input type="checkbox" id='inp_b_rele9'>
                                     <span class="slider"></span>
@@ -154,10 +156,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-6">
                                 <p class='inputText'>Rele 10</p>
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-6">
                                 <label class="switch">
                                     <input type="checkbox" id='inp_b_rele10'>
                                     <span class="slider"></span>
@@ -165,10 +167,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-6">
                                 <p class='inputText'>Rele 11</p>
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-6">
                                 <label class="switch">
                                     <input type="checkbox" id='inp_b_rele11'>
                                     <span class="slider"></span>
@@ -176,10 +178,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-6">
                                 <p class='inputText'>Rele 12</p>
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-6">
                                 <label class="switch">
                                     <input type="checkbox" id='inp_b_rele12'>
                                     <span class="slider"></span>
@@ -187,10 +189,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-6">
                                 <p class='inputText'>Rele 13</p>
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-6">
                                 <label class="switch">
                                     <input type="checkbox" id='inp_b_rele13'>
                                     <span class="slider"></span>
