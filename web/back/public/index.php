@@ -2,6 +2,7 @@
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Factory\AppFactory;
+use Tuupola\Middleware\CorsMiddleware;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -19,6 +20,17 @@ $resp = "";
 
 # Starting App
 $app = AppFactory::create();
+
+
+$app->add(new Tuupola\Middleware\CorsMiddleware([
+    "origin" => ["http://localhost", "http://appfeliz.com.br", "https://appfeliz.com.br"],
+    "methods" => ["GET", "POST", "PATCH", "DELETE", "OPTIONS"],    
+    "headers.allow" => ["Origin", "Content-Type", "Authorization", "Accept", "ignoreLoadingBar", "X-Requested-With", "Access-Control-Allow-Origin"],
+    "headers.expose" => [],
+    "credentials" => true,
+    "cache" => 0,        
+]));
+
 
 $app->setBasePath("/pibiti/web/back/public");
 
