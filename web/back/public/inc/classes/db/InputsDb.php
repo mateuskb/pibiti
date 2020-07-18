@@ -154,8 +154,7 @@ class InputsDb {
         return $data;
     }
 
-    public function verify($input){
-        $inputs = [];
+    public function verify($inputs){
 
         $data = [
             'ok'=>false,
@@ -164,15 +163,18 @@ class InputsDb {
         ];
         // $data['input'] = $input;
 
-        if(isset($input)){
-            $inputs = array_key_exists("inputs",$input) ? $input['inputs'] : [];
-        };
+        // if(isset($input)){
+        //     $inputs = array_key_exists("inputs",$input) ? $input['inputs'] : [];
+        // };
         //$data['hash'] = $hash;
 
         if (empty($data['errors'])):
             
             // TO DO
-            // $data['errors']['simulador'] = "Teste de erro simulado";
+            // $data['inputs'] = $inputs;
+            if($inputs['inp_b_rele1'] == '1'):
+                $data['errors']['simulador'] = "Teste de erro simulado";
+            endif;
             
         endif;
         
@@ -197,6 +199,8 @@ class InputsDb {
             'data'=>false
         ];
         
+        $data['input'] = $input;
+
         if(isset($input)){
             $id_usuario = array_key_exists("usr_pk",$input) ? $input['usr_pk'] : '';
             $id_login = array_key_exists("log_pk",$input) ? $input['log_pk'] : '';
@@ -216,7 +220,7 @@ class InputsDb {
 
         foreach(INPUTS_AVAILABLE as $ia){
             if (!array_key_exists($ia ,$inputs)):
-                $data['errors']['inputs'][$ia] = 'Input não registrado!'.$ia;
+                $data['errors']['inputs'][$ia] = 'Input não registrado: '.$ia;
             endif;
         }
 
@@ -230,9 +234,9 @@ class InputsDb {
 
             
             $resp = $this->verify($inputs);
-
+            // $data['resp'] = $resp;
             if (!$resp['ok'] & !$resp['data']):
-                $data['errors']['inputs'] = "Inputs poderiam causar um dano ao módulo.";
+                $data['errors']['inputsValidation'] = "Inputs poderiam causar um dano ao módulo.";
             endif;
 
             if(empty($data['errors'])):
