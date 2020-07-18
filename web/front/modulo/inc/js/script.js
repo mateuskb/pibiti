@@ -59,7 +59,7 @@ async function c_inputs(inputs){
                 if(data.ok){
                     r = true;
                 } else {
-                    console.log(data.errors);
+                    // console.log(data);
                     for (let key in data.errors){
                         if(key == 'inputs'){
                             for (let key2 in data.errors[key]){
@@ -149,11 +149,11 @@ function getinputs(){
             Getinputs(token).then(function(response){
                 resp = response;
                 data = resp.data;
-
                 if(data.ok){
                     data = data.data;
                     inputs = copyArray(data);
                     loadInputs(inputs);
+                    // console.log(inputs);
                 } else {
                     for (let key in data.errors){
                         error = data.errors[key];
@@ -214,11 +214,13 @@ $(document).ready(function () {
     var resp;
     
     /*------RANGE------*/
-
+    getinputs();
+    setInterval( function(){ 
+        getinputs();
+    }  , 2000 );
     
     verify();
     
-    getinputs();
     
     
     /* UPDATE INPUTS */

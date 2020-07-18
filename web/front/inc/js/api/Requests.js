@@ -202,7 +202,7 @@ async function Getinputs(token) {
 }
 
 async function C_inputs(token, inputs) {
-    console.log(inputs);
+    // console.log(inputs);
     // alert(auth);
     const config = {
         method: 'post',

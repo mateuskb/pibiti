@@ -71,11 +71,15 @@ class InputsDb {
         if(empty($data['errors'])):
             $data['ok'] = true;
             if(!$in_transaction):
-                $this->conn->commit();
+                if($this->conn->inTransaction()):
+                    $this->conn->commit();
+                endif;
             endif;
         else:
             if(!$in_transaction):
-                $this->conn->rollback(); 
+                if($this->conn->inTransaction()):
+                    $this->conn->rollback(); 
+                endif;
             endif;
         endif;
         return $data;
@@ -142,11 +146,15 @@ class InputsDb {
                 $data['ok'] = true;
                 $data['data'] = true;
                 if(!$in_transaction):
-                    $this->conn->commit();
+                    if($this->conn->inTransaction()):
+                        $this->conn->commit();
+                    endif;
                 endif;
             else:
                 if(!$in_transaction):
-                    $this->conn->rollback(); 
+                    if($this->conn->inTransaction()):
+                        $this->conn->rollback(); 
+                    endif;
                 endif;
             endif;
 
@@ -189,6 +197,7 @@ class InputsDb {
     public function c_inputs($input) {
         // Vars
         $id_usuario = 0;
+        $in_transaction = false;
         $id_login = 0;
         $dt_now = '';
         $inputs = [];
@@ -199,7 +208,7 @@ class InputsDb {
             'data'=>false
         ];
         
-        $data['input'] = $input;
+        // $data['input'] = $input;
 
         if(isset($input)){
             $id_usuario = array_key_exists("usr_pk",$input) ? $input['usr_pk'] : '';
@@ -309,12 +318,16 @@ class InputsDb {
             if(empty($data['errors'])):
                 $data['ok'] = true;
                 $data['data'] = true;
-                if($this->conn->inTransaction()):
-                    $this->conn->commit();
+                if(!$in_transaction):
+                    if($this->conn->inTransaction()):
+                        $this->conn->commit();
+                    endif;
                 endif;
             else:
-                if($this->conn->inTransaction()):
-                    $this->conn->rollback(); 
+                if(!$in_transaction):
+                    if($this->conn->inTransaction()):
+                        $this->conn->rollback(); 
+                    endif;
                 endif;
             endif;
         endif;
