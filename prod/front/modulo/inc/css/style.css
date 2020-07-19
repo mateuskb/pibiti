@@ -229,6 +229,7 @@ iframe {
 .ranger {
     width: 80%;
     float: left;
+    margin-left: 20px;
     margin-right: 20px;
 }
 /* text */
