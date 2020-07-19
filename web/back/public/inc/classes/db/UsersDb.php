@@ -59,9 +59,13 @@ class UserDb {
         
         /*
         HOW TO HASH PASSWORD
-        $hash_criado = password_hash($password, PASSWORD_BCRYPT, OPTIONS_HASH);
-        $data['data']['hashCriado'] = $hash_criado;
+        $hash_criado = password_hash("Pibiti2020", PASSWORD_BCRYPT, OPTIONS_HASH);
+        $data['hashCriado'] = $hash_criado;
+        
+        $hash_verif = password_verify("Pibiti2020", $hash_criado);
+        $data['hashverif'] = $hash_verif;
         */
+        
 
         if(empty($data['errors'])):
             if(!isset($this->conn)):

@@ -29,7 +29,8 @@ input_element = {
 }
 
 # urls
-request_url = 'http://localhost/pibiti/web/back/public'
+request_url_local = 'http://localhost/pibiti/web/back/public'
+request_url = 'http://appfeliz.com.br/server/pibiti/public'
 image_url = './inc/images/modulo.png'
 
 default_inputs = {} # TO DO

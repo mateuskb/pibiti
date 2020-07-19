@@ -62,7 +62,6 @@ def main():
                     if self.modulo.running:
                         
                         resp = Requests.r_inputs()
-                        # print(resp)
                         if resp:
                             text = str(resp)
 
@@ -79,7 +78,7 @@ def main():
                                 pass
 
 
-                        self.master.after(250, read_inputs)
+                        self.master.after(200, read_inputs)
 
                 read_inputs()
             else:

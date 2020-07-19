@@ -1,0 +1,211 @@
+[18-Jul-2020 17:27:06 America/Fortaleza] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php:93
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(211): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(195): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/public/index.php(93): Slim\App->run()
+#5 {main}
+  thrown in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php on line 93
+[18-Jul-2020 17:27:30 America/Fortaleza] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php:93
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(211): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(195): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/public/index.php(93): Slim\App->run()
+#5 {main}
+  thrown in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php on line 93
+[18-Jul-2020 17:27:56 America/Fortaleza] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php:93
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(211): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(195): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/public/index.php(93): Slim\App->run()
+#5 {main}
+  thrown in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php on line 93
+[18-Jul-2020 17:29:05 America/Fortaleza] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php:93
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(211): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(195): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/public/index.php(93): Slim\App->run()
+#5 {main}
+  thrown in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php on line 93
+[18-Jul-2020 17:42:12 America/Fortaleza] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php:93
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(211): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(195): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/public/index.php(93): Slim\App->run()
+#5 {main}
+  thrown in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php on line 93
+[18-Jul-2020 18:02:23 America/Fortaleza] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php:93
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(211): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(195): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/public/index.php(93): Slim\App->run()
+#5 {main}
+  thrown in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php on line 93
+[18-Jul-2020 18:25:14 America/Fortaleza] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php:93
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(211): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(195): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/public/index.php(185): Slim\App->run()
+#5 {main}
+  thrown in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php on line 93
+[18-Jul-2020 18:27:37 America/Fortaleza] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php:93
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(211): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(195): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/public/index.php(187): Slim\App->run()
+#5 {main}
+  thrown in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php on line 93
+[18-Jul-2020 18:27:37 America/Fortaleza] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php:93
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(211): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(195): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/public/index.php(187): Slim\App->run()
+#5 {main}
+  thrown in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php on line 93
+[18-Jul-2020 19:05:29 America/Fortaleza] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php:93
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /home2/appfel24/public_html/server/pibiti/vendor/tuupola/cors-middleware/src/CorsMiddleware.php(113): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(140): Tuupola\Middleware\CorsMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(211): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /home2/appfel24/p in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php on line 93
+[18-Jul-2020 19:05:38 America/Fortaleza] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php:93
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /home2/appfel24/public_html/server/pibiti/vendor/tuupola/cors-middleware/src/CorsMiddleware.php(113): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(140): Tuupola\Middleware\CorsMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(211): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /home2/appfel24/p in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php on line 93
+[18-Jul-2020 19:05:47 America/Fortaleza] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php:93
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /home2/appfel24/public_html/server/pibiti/vendor/tuupola/cors-middleware/src/CorsMiddleware.php(113): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(140): Tuupola\Middleware\CorsMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(211): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /home2/appfel24/p in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php on line 93
+[18-Jul-2020 19:07:09 America/Fortaleza] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php:93
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /home2/appfel24/public_html/server/pibiti/vendor/tuupola/cors-middleware/src/CorsMiddleware.php(113): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(140): Tuupola\Middleware\CorsMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(211): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /home2/appfel24/p in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php on line 93
+[18-Jul-2020 19:07:10 America/Fortaleza] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php:93
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /home2/appfel24/public_html/server/pibiti/vendor/tuupola/cors-middleware/src/CorsMiddleware.php(113): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(140): Tuupola\Middleware\CorsMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/App.php(211): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /home2/appfel24/p in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php on line 93
+[18-Jul-2020 19:08:08 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function beginTransaction() on string in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php:364
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/public/index.php(63): UserDb->permission()
+#1 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /home2/appfel24/public_html/server/pibiti/vendor/sli in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 364
+[18-Jul-2020 19:08:09 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:08:09 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:08:15 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function beginTransaction() on string in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php:364
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/public/index.php(63): UserDb->permission()
+#1 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /home2/appfel24/public_html/server/pibiti/vendor/sli in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 364
+[18-Jul-2020 19:08:54 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to a member function beginTransaction() on string in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php:364
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/public/index.php(63): UserDb->permission()
+#1 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /home2/appfel24/public_html/server/pibiti/vendor/sli in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 364
+[18-Jul-2020 19:19:39 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:19:39 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:20:32 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:20:32 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:21:06 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:21:06 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:21:18 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:21:18 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:23:47 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:23:47 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:25:13 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:25:13 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:25:21 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:25:21 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:26:49 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:26:49 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:28:07 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:28:07 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:28:15 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:28:15 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:28:38 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:28:38 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:29:57 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:29:57 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:30:55 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:30:55 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:31:03 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:31:03 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:31:04 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:31:04 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:31:23 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:31:23 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:31:39 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:31:39 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:32:05 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:32:05 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:32:53 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:32:53 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:34:37 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:34:37 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:34:50 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:34:50 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 19:35:33 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 427
+[18-Jul-2020 19:35:33 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 428
+[18-Jul-2020 20:05:07 America/Fortaleza] PHP Fatal error:  Uncaught TypeError: Return value of Slim\Handlers\Strategies\RequestResponse::__invoke() must implement interface Psr\Http\Message\ResponseInterface, array returned in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:43
+Stack trace:
+#0 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#2 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 /home2/appfel24/public_html/server/pibiti/vendor/sl in /home2/appfel24/public_html/server/pibiti/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php on line 43
+[18-Jul-2020 20:15:16 America/Fortaleza] PHP Warning:  trim() expects parameter 1 to be string, array given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/lib/HttpLib.php on line 14
+[18-Jul-2020 20:15:16 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 52
+[18-Jul-2020 20:15:16 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 53
+[18-Jul-2020 20:15:18 America/Fortaleza] PHP Warning:  trim() expects parameter 1 to be string, array given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/lib/HttpLib.php on line 14
+[18-Jul-2020 20:15:18 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 52
+[18-Jul-2020 20:15:18 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 53
+[18-Jul-2020 20:15:20 America/Fortaleza] PHP Warning:  trim() expects parameter 1 to be string, array given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/lib/HttpLib.php on line 14
+[18-Jul-2020 20:15:20 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 52
+[18-Jul-2020 20:15:20 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 53
+[18-Jul-2020 20:15:26 America/Fortaleza] PHP Warning:  trim() expects parameter 1 to be string, array given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/lib/HttpLib.php on line 14
+[18-Jul-2020 20:15:26 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 52
+[18-Jul-2020 20:15:26 America/Fortaleza] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/db/UsersDb.php on line 53
+[18-Jul-2020 20:16:25 America/Fortaleza] PHP Warning:  trim() expects parameter 1 to be string, array given in /home2/appfel24/public_html/server/pibiti/public/inc/classes/lib/HttpLib.php on line 14

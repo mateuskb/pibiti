@@ -23,9 +23,9 @@ $app = AppFactory::create();
 
 
 $app->add(new Tuupola\Middleware\CorsMiddleware([
-    "origin" => ["http://localhost", "http://appfeliz.com.br", "https://appfeliz.com.br"],
+    "origin" => ["http://appfeliz.com.br", "https://appfeliz.com.br", "http://localhost", ],
     "methods" => ["GET", "POST", "PATCH", "DELETE", "OPTIONS"],    
-    "headers.allow" => ["Origin", "Content-Type", "Authorization", "Accept", "ignoreLoadingBar", "X-Requested-With", "Access-Control-Allow-Origin"],
+    "headers.allow" => ["Origin", "Content-Type", "", "Accept", "ignoreLoadingBar", "X-Requested-With", "Access-Control-Allow-Origin"],
     "headers.expose" => [],
     "credentials" => true,
     "cache" => 0,        

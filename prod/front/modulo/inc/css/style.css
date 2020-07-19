@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+html,
+body{
+    background: #01574C;
+    color: #666;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;    
+    display: block;
+    height: 0; 
+    visibility: hidden;
+}
+
+/*------------Heading----------------*/
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 300%;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-transform: none;
+}
+
+h2 {
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+h3 {
+    font-size: 120%;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/*--------Buttons---------*/
+
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;   
+    text-decoration: none;
+    border-radius: 200px;
+    color: #fff;
+    -webkit-transition: background-color 0.2s, color 0.2s, border 0.2s;
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
+    -webkit-transition-property: width;
+    transition-property: width;
+}
+
+
+.btn-full:link,
+.btn-full:visited{
+    background-color: #01574C;
+    border: 1px solid #01574C;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited,
+input[type=submit]{
+    border: 1px solid #01574C;
+    color: #01574C;
+    font-weight: 350
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+    background-color: rgb(0, 138, 119);
+    border-color: rgb(0, 138, 119);
+}
+
+.btn-ghost:hover,
+.btn-ghost:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+    color: #fff;
+}
+/*----------------------------*/
+
+/*---------MAIN-----------*/
+
+/*iframe{
+    height: auto;
+}
+*/
+
+.live{
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    border: 0
+}
+
+iframe {
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+/*---------- CONTROL -------------*/
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+
+/*RAGER*/
+/* The slider itself */
+.ranger {
+-webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.ranger:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.ranger::-webkit-slider-thumb {
+-webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: rgb(0, 138, 119); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.ranger::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: rgb(0, 138, 119); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+/*TOGGLE*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: rgb(0, 138, 119);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px rgb(0, 138, 119);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+.ranger {
+    width: 80%;
+    float: left;
+    margin-right: 20px;
+}
+/* text */
+
+.inputText {
+    color: #fff;
+    font-size: 120%;
+}

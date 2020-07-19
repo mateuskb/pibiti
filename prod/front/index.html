@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href='inc/css/style.css'>
+
+    <link href="./modulo/inc/vendor/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <script src="./modulo/inc/vendor/bootstrap.min.js"></script>
+
+    <script src="./modulo/inc/vendor/jquery.min.js"></script>
+
+    
+
+    <script src="./modulo/inc/vendor/axios.min.js"></script>
+
+
+
+    <script src='inc/js/api/consts.js'></script>
+
+    <script src='inc/js/script.js'></script>
+
+
+
+</head>
+
+<html lang='pt-br'>
+
+    <div class="wrapper fadeInDown">
+
+        <!-- Caso o módulo esteja disponível -->
+
+        <div id="formContent" class="allowed" style="background-color: #049b69;">
+
+            <!-- Tabs Titles -->
+
+
+
+            <!-- Icon -->
+
+            <div class="fadeIn first">
+
+                <h2 style="padding-top: 20px;padding-bottom: 20px;color: #fff;">Acessar módulo</h2>
+
+            </div>
+
+
+
+            <!-- Login Form -->
+
+            <form class="form" method="post" action="#">
+
+                <input type="text" id="login" class="fadeIn second input" name="login" placeholder="login">
+
+                <input type="password" id="password" class="fadeIn third input" name="password" placeholder="password">
+
+                <input type="submit" class="fadeIn fourth" id='submit' name='submit' value="Log In">
+
+            </form>
+
+
+
+            <!-- Remind Passowrd -->
+
+            <div id="formFooter">
+
+                <a class="underlineHover" href="http://appfeliz.com.br/">&copy; 2020 appfeliz.com.br</a>
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <!-- Caso módulo esteja ocupado -->
+
+        <div id="formContent" class="not_allowed"  style="background-color: #c12a2c;">
+
+            <!-- Icon -->
+
+            <div class="fadeIn first">
+
+                <h2 class=''style="padding-top: 20px; padding-bottom: 20px; color: #fff;">Módulo ocupado</h2>
+
+            </div>
+
+
+
+            <!-- Remind Passowrd -->
+
+            <div id="formFooter">
+
+                <a class="underlineHover" href="#">&copy; 2020 fisicatual.com.br</a>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+</html>
+
