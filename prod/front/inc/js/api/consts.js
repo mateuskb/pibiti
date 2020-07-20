@@ -1,2 +1,2 @@
-var URL_PATH = 'https://appfeliz.com.br/server/pibiti/public';
+var URL_PATH = 'https://api.appfeliz.com.br/pibiti/public';
 

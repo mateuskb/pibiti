@@ -34,7 +34,7 @@ $app->add(new Tuupola\Middleware\CorsMiddleware([
 ]));
 
 
-$app->setBasePath("/server/pibiti/public");
+$app->setBasePath("/pibiti/public");
 
 $app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write("PIBITI api!");
