@@ -37,7 +37,11 @@ class Requests:
 
     @staticmethod
     def negate(id_input):
-        headers= {"User-Agent" : "Mozilla Firefox"}
+        print(f"Negando {id_input}")
+        headers= {
+            "User-Agent" : "Mozilla Firefox", 
+            'Content-Type': 'application/json'
+            }
         url = request_url + '/negate'
 
         try:

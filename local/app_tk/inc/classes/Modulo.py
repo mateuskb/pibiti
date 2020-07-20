@@ -41,6 +41,13 @@ class Modulo:
         return True
 
     def __verify_inputs(self, inputs):
-        if inputs['inp_b_rele1'] == '1':
+        if inputs['inp_b_rele3'] == '1' and inputs['inp_b_rele4'] == '1' and inputs['inp_b_rele5'] == '1':
             return False
+
+        if inputs['inp_b_rele7'] == '1' and inputs['inp_b_rele8'] == '1' and inputs['inp_b_rele9'] == '1':
+            return False
+        
+        if inputs['inp_b_rele11'] == '1' and inputs['inp_b_rele12'] == '1' and inputs['inp_b_rele13'] == '1':
+            return False
+
         return True
