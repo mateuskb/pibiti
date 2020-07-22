@@ -4,28 +4,28 @@
 resolution = 800, 800
 
 # Input positions
-size_x = 11
-size_y = 60
+size_x = 20
+size_y = 20
 input_element = {
     # fonte
-    "inp_i_fonte" : [114, 265],
+    "inp_i_fonte" : [['Fonte :', [55,50]], [100, 50]],
     # outros
-    "inp_b_rele1" : [134, 135],
-    "inp_b_rele2" : [274, 50],
-    "inp_b_rele3" : [414, 50],
-    "inp_b_rele4" : [554, 50],
+    "inp_b_rele1" : [['Rele 1 : ', [50, 200]], [100, 190]],
     # first line
-    "inp_b_rele5" : [274, 135],
-    "inp_b_rele6" : [274, 235],
-    "inp_b_rele7" : [274, 339],
+    "inp_b_rele2" : [['Rele 2 : ',[200, 150]], [250, 140]],
+    "inp_b_rele3" : [['Rele 3 : ',[200, 250]], [250, 240]],
+    "inp_b_rele4" : [['Rele 4 : ',[200, 350]], [250, 340]],
+    "inp_b_rele5" : [['Rele 5 : ', [200, 450]], [250, 440]],
     # second line
-    "inp_b_rele8" : [414, 135],
-    "inp_b_rele9" : [417, 235],
-    "inp_b_rele10" : [420, 339],
+    "inp_b_rele6" : [['Rele 6 : ', [350, 150]], [400, 140]],
+    "inp_b_rele7" : [['Rele 7 : ', [350, 250]], [400, 240]],
+    "inp_b_rele8" : [['Rele 8 : ', [350, 350]], [400, 340]],
+    "inp_b_rele9" : [['Rele 9 : ', [350, 450]], [400, 440]],
     # third line
-    "inp_b_rele11" : [554, 135],
-    "inp_b_rele12" : [558, 235],
-    "inp_b_rele13" : [562, 339],
+    "inp_b_rele10" : [['Rele 10 : ', [500, 150]], [550, 140]],
+    "inp_b_rele11" : [['Rele 11 : ', [500, 250]], [550, 240]],
+    "inp_b_rele12" : [['Rele 12 : ', [500, 350]], [550, 340]],
+    "inp_b_rele13" : [['Rele 13 : ', [500, 450]], [550, 440]],
 }
 
 # urls

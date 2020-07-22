@@ -99,16 +99,18 @@ def main():
             # delete everything in canvas
             self.canvas.delete('all')
             # recreate image
-            self.canvas.create_image(0, 0, image = self.module_image, anchor='nw')
+            # self.canvas.create_image(0, 0, image = self.module_image, anchor='nw')
 
             # light on values == '1'
             for key, value in self.inputs.items():
                 if key == "inp_i_fonte":
-                     self.canvas.create_text(input_element[key][0], input_element[key][1], fill="darkblue",font="Times 16 italic bold",text=value)                    
+                    self.canvas.create_text(input_element[key][0][1][0], input_element[key][0][1][1], fill="gray15",font="Times 16 italic bold",text=input_element[key][0][0])
+                    self.canvas.create_text(input_element[key][1][0], input_element[key][1][1], fill="darkblue",font="Times 16 italic bold",text=value)                    
                 else:
                     if key in input_element.keys():
+                        self.canvas.create_text(input_element[key][0][1][0], input_element[key][0][1][1], fill="gray15",font="Times 16 italic bold",text=input_element[key][0][0])
                         if value == '1':
-                            self.canvas.create_rectangle(input_element[key][0], input_element[key][1], input_element[key][0]+size_x, input_element[key][1]+size_y, fill='yellow')
+                            self.canvas.create_oval(input_element[key][1][0], input_element[key][1][1], input_element[key][1][0]+size_x, input_element[key][1][1]+size_y, fill='yellow')
 
 
     root = tk.Tk()
