@@ -110,7 +110,10 @@ def main():
                     if key in input_element.keys():
                         self.canvas.create_text(input_element[key][0][1][0], input_element[key][0][1][1], fill="gray15",font="Times 16 italic bold",text=input_element[key][0][0])
                         if value == '1':
-                            self.canvas.create_oval(input_element[key][1][0], input_element[key][1][1], input_element[key][1][0]+size_x, input_element[key][1][1]+size_y, fill='yellow')
+                            color = 'SpringGreen2'
+                        else:
+                            color = 'red2'
+                        self.canvas.create_oval(input_element[key][1][0], input_element[key][1][1], input_element[key][1][0]+size_x, input_element[key][1][1]+size_y, fill=color)
 
 
     root = tk.Tk()
