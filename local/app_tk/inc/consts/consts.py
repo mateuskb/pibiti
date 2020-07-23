@@ -10,7 +10,7 @@ input_element = {
     # fonte
     "inp_i_fonte" : [['Fonte :', [55,50]], [100, 50]],
     # outros
-    "inp_b_rele1" : [['Relé 1 : ', [50, 200]], [100, 190]],
+    "inp_b_rele1" : [['Relé 1 : ', [50, 250]], [100, 240]],
     # first line
     "inp_b_rele2" : [['Relé 2 : ',[200, 150]], [250, 140]],
     "inp_b_rele3" : [['Relé 3 : ',[200, 250]], [250, 240]],
