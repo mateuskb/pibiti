@@ -31,7 +31,7 @@ input_element = {
 # urls
 request_url_local = 'http://localhost/pibiti/web/back/public'
 request_url = 'http://api.appfeliz.com.br/pibiti/public'
-image_url = './inc/images/modulo.png'
+#image_url = '/home/pi/Documents/programming/pibiti/local/app_tk/inc/images/modulo.png'
 
 default_inputs = {} # TO DO
 

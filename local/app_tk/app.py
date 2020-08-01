@@ -1,4 +1,4 @@
-#!/var/www/html/pibiti/local/app_tk/env/bin/python3.6
+#!/home/pi/Documents/programming/pibiti/local/app_tk/env/bin/python3.6
 
 import tkinter as tk
 import tkinter.font as tkFont
@@ -31,7 +31,7 @@ def main():
             text1 = tkFont.Font(family="Times New Roman", size=18)
 
             # images
-            self.module_image = ImageTk.PhotoImage(file = image_url)
+            #self.module_image = ImageTk.PhotoImage(file = image_url)
 
             # elements
             self.title = tk.Label(self.master, text="Controle do módulo!", font=h1, fg='grey20', pady=15)

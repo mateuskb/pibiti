@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Modulo
+Exec=python3 /home/pi/Documents/programming/pibiti/local/app_tk/app.py
+Icon=/home/pi/Documents/programming/pibiti/local/app_tk/icon.png
+Type=Application
+Name[pt_BR]=modulo
+Terminal=false
+Categories=Application
+NoDisplay=true
