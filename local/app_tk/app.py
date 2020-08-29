@@ -104,11 +104,14 @@ def main():
             # light on values == '1'
             for key, value in self.inputs.items():
                 if key == "inp_i_fonte":
-                    self.canvas.create_text(input_element[key][0][1][0], input_element[key][0][1][1], fill="gray15",font="Times 16 italic bold",text=input_element[key][0][0])
+                    #text = f'{input_element[key][0][0]} {input_element[key][2][0]}'
+                    text = f'{input_element[key][2][0]} : '
+                    self.canvas.create_text(input_element[key][0][1][0], input_element[key][0][1][1], fill="gray15",font="Times 16 italic bold",text=text)
                     self.canvas.create_text(input_element[key][1][0], input_element[key][1][1], fill="darkblue",font="Times 16 italic bold",text=value)                    
                 else:
                     if key in input_element.keys():
-                        self.canvas.create_text(input_element[key][0][1][0], input_element[key][0][1][1], fill="gray15",font="Times 16 italic bold",text=input_element[key][0][0])
+                        text = f'{input_element[key][2][0]} : '
+                        self.canvas.create_text(input_element[key][0][1][0], input_element[key][0][1][1], fill="gray15",font="Times 16 italic bold",text=text)
                         if value == '1':
                             color = 'SpringGreen2'
                         else:
