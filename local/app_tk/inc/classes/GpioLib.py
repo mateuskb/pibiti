@@ -21,7 +21,7 @@ class Gpiolib:
         self.pwm=False
         
     def __init_set_up(self):
-        for i in input_element:
+        for i in input_element.keys():
             if i == 'inp_i_fonte':
                 self.pwm = GPIO.PWM(input_element[i][2][1], 1000)
                 self.pwm.start(12)
