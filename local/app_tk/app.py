@@ -107,7 +107,7 @@ def main():
                     #text = f'{input_element[key][0][0]} {input_element[key][2][0]}'
                     text = f'{input_element[key][2][0]} : '
                     self.canvas.create_text(input_element[key][0][1][0], input_element[key][0][1][1], fill="gray15",font="Times 16 italic bold",text=text)
-                    self.canvas.create_text(input_element[key][1][0], input_element[key][1][1], fill="darkblue",font="Times 16 italic bold",text=value)                    
+                    self.canvas.create_text(input_element[key][1][0], input_element[key][1][1], fill="darkblue",font="Times 16 italic bold",text=value + ' V')                    
                 else:
                     if key in input_element.keys():
                         text = f'{input_element[key][2][0]} : '

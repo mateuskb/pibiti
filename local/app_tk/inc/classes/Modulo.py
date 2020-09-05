@@ -1,4 +1,5 @@
 from inc.consts.consts import *
+from inc.classes.GpioLib import Gpiolib
 
 class Modulo:
     """
@@ -19,17 +20,27 @@ class Modulo:
         #self.__inputs = inputs
         self.__run = run
         self.running = False
+        self.gpio = None
 
         if self.__run:
             self.start(inputs)
     
     def start(self, inputs=default_inputs):
         self.running = True
+        self.gpio = Gpiolib()
         return True
 
     def update_inputs(self, inputs):
         if self.running:
             if self.__verify_inputs(inputs):
+                for key, value in inputs:
+                    if key == 'inp_i_fonte':
+                        self.gpio.set_gpio(input_element[key][2][1], value)
+                    else:
+                        if value == '1':
+                            self.gpio.set_gpio(input_element[key][2][1], True)
+                        else:
+                            self.gpio.set_gpio(input_element[key][2][1], False)
                 return True
             else:
                 return False
