@@ -361,23 +361,30 @@ async function verifyInputs(inputs){
     resp = true;
 
 
-
-    if(inputs['inp_b_rele3'] == "1" & inputs['inp_b_rele4'] == "1" & inputs['inp_b_rele5'] == "1"){
-
-        resp = false
-
-    } 
-    if(inputs['inp_b_rele7'] == "1" & inputs['inp_b_rele8'] == "1" & inputs['inp_b_rele9'] == "1"){
-
-        resp = false
-
-    } 
-    if(inputs['inp_b_rele11'] == "1" & inputs['inp_b_rele12'] == "1" & inputs['inp_b_rele13'] == "1"){
-
-        resp = false
-
+    if(inputs['inp_b_rele2'] == "1"){
+        if(inputs['inp_b_rele3'] == "1" & inputs['inp_b_rele4'] == "1" & inputs['inp_b_rele5'] == "1"){
+            
+            resp = false
+            
+        } 
+    }
+    if(inputs['inp_b_rele6'] == "1"){
+        if(inputs['inp_b_rele7'] == "1" & inputs['inp_b_rele8'] == "1" & inputs['inp_b_rele9'] == "1"){
+    
+            resp = false
+    
+        }
     } 
 
+    
+    if(inputs['inp_b_rele10'] == "1"){
+        if(inputs['inp_b_rele11'] == "1" & inputs['inp_b_rele12'] == "1" & inputs['inp_b_rele13'] == "1"){
+            
+            resp = false
+            
+        } 
+    }
+        
 
 
     if(!resp) {
@@ -397,27 +404,26 @@ async function verifyInputs(inputs){
 async function loadInputs(inputs){
 
     for (let key in inputs) {
+        if ( inputs['inp_b_rele1'] == "0"  & key !== 'inp_b_rele1'){
+            $("#"+key).prop('disabled', true);        
+            $("#"+key).prop('checked', false);        
+        } else {
+            $("#"+key).prop('disabled', false);        
 
-
-
-        // console.log('Key: ', key);
-
-        // console.log('Value: ', inputs[key]);
-
-
-
-        if ( key == 'inp_i_fonte'){
-
-            $("#inp_i_fonte").val(inputs[key]);
-
-            var output = document.getElementById("fonte_out");
-
-            output.innerHTML = inputs[key];
-
-        }else{
-
-            (inputs[key]==1) ? $("#"+key).prop("checked", true ): $("#"+key).prop("checked", false );
-
+            
+            if ( key == 'inp_i_fonte'){
+                
+                $("#inp_i_fonte").val(inputs[key]);
+                
+                var output = document.getElementById("fonte_out");
+                
+                output.innerHTML = inputs[key];
+                
+            }else{
+                
+                (inputs[key]==1) ? $("#"+key).prop("checked", true ): $("#"+key).prop("checked", false );
+                
+            }
         }
 
     } 
@@ -522,9 +528,12 @@ $(document).ready(function () {
 
                         inputs['inp_b_rele1'] = "1";
 
+                        $('#ligarModuloText').text("Desligar módulo");
+                        
                     } else {
-
+                        
                         inputs['inp_b_rele1'] = "0";
+                        $('#ligarModuloText').text("Ligar módulo");
 
                     }
 
