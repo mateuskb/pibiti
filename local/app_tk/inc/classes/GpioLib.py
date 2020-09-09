@@ -22,11 +22,10 @@ class Gpiolib:
         
     def __init_set_up(self):
         for i in input_element.keys():
+            GPIO.setup(input_element[i][2][1], GPIO.OUT)
             if i == 'inp_i_fonte':
                 self.pwm = GPIO.PWM(input_element[i][2][1], 1000)
                 self.pwm.start(40)
-            else:
-                GPIO.setup(input_element[i][2][1], GPIO.OUT)
         
     def set_gpio(self, pin, value):
         if(pin == input_element['inp_i_fonte'][2][1]):
