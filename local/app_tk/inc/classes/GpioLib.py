@@ -28,7 +28,7 @@ class Gpiolib:
                 self.pwm.start(40)
         
     def set_gpio(self, pin, value):
-        if(pin == input_element['inp_i_fonte'][2][1]):
+        if pin == input_element['inp_i_fonte'][2][1]:
             try:
                 value = int(value)
                 value = value / 30 * 100
@@ -37,8 +37,10 @@ class Gpiolib:
                 elif value <= 40:
                     value = 40
             except:
-                value = 40;
-            self.pwm.ChangeDutyCycle(value)
+                value = 40
+            finally:
+                self.pwm.ChangeDutyCycle(value)
+
         else :
             if value:
                 GPIO.output(pin, GPIO.HIGH)
