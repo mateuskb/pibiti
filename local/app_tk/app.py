@@ -27,14 +27,14 @@ def main():
             self.master.maxsize(resolution[0], resolution[1])
 
             # fonts 
-            h1 = tkFont.Font(family="Times New Roman", size=38)
+            h1 = tkFont.Font(family="Times New Roman", size=28)
             text1 = tkFont.Font(family="Times New Roman", size=18)
 
             # images
             #self.module_image = ImageTk.PhotoImage(file = image_url)
 
             # elements
-            self.title = tk.Label(self.master, text="Controle do módulo!", font=h1, fg='grey20', pady=15)
+            self.title = tk.Label(self.master, text="Controle do módulo!", font=h1, fg='grey20', pady=5)
 
             self.main_button = tk.Button(self.master, text="Iniciar", bg='green', fg='white', command=self.run, height=3, width=20, font=text1)
 
@@ -42,10 +42,14 @@ def main():
 
             self.build()
 
+        def on_closing(self):
+                self.modulo.stop()
+                root.destroy()
+                
         def build(self):
             # pack everything and show in the screen
-            self.title.pack(pady=30)
-            self.main_button.pack(pady=20)
+            self.title.pack(pady=20)
+            self.main_button.pack(pady=10)
             self.canvas.pack(pady=0)
             self.modulo = Modulo(run=False)
             
@@ -62,6 +66,7 @@ def main():
                     if self.modulo.running:
                         
                         resp = Requests.r_inputs()
+                        
                         if resp:
                             text = str(resp)
 
@@ -74,7 +79,8 @@ def main():
                                     self.update_image()
                                 else:
                                     Requests.negate(self.inputs['inp_pk'])
-                            except:
+                            except Exception as e:
+                                print(e)
                                 pass
 
 
@@ -121,12 +127,9 @@ def main():
 
     root = tk.Tk()
     my_gui = GUI(root)
-    def on_closing():
-        if messagebox.askokcancel("Quit", "Deseja desligar o módulo?"):
-            self.modulo.stop()
-            root.destroy()
-
-    root.protocol("WM_DELETE_WINDOW", on_closing)
+    
+            
+    root.protocol("WM_DELETE_WINDOW", my_gui.on_closing)
     root.mainloop()
 
 if __name__ == "__main__":

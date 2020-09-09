@@ -16,40 +16,39 @@ class Gpiolib:
     """
     
     def __init__(self):
-        GPIO.setmode(GPIO.BOARD)
         GPIO.setwarnings(False)
         GPIO.cleanup()
+        GPIO.setmode(GPIO.BOARD)
         self.__init_set_up()
-        self.pwm=False
         
     def __init_set_up(self):
         for i in input_element.keys():
-            if(i in elements):
+            if i in elements:
                 GPIO.setup(input_element[i][2][1], GPIO.OUT)
                 if i == 'inp_i_fonte':
-                    self.pwm = GPIO.PWM(input_element[i][2][1], 1000)
+                    self.pwm = GPIO.PWM(input_element['inp_i_fonte'][2][1], 1000)
                     self.pwm.start(40)
+                    
         
     def set_gpio(self, pin, value):
-        if pin == input_element['inp_i_fonte'][2][1]:
-            try:
-                value = int(value)
-                value = value / 30 * 100
-                if value >= 95:
-                    value = 95
-                elif value <= 40:
-                    value = 40
-            except:
-                value = 40
-            finally:
-                self.pwm.ChangeDutyCycle(value)
-
-        else :
-            if value:
-                GPIO.output(pin, GPIO.HIGH)
-            else:
-                GPIO.output(pin, GPIO.LOW)
+        if value:
+            GPIO.output(pin, GPIO.HIGH)
+        else:
+            GPIO.output(pin, GPIO.LOW)
     
+    def set_pwm(self, value):
+        try:
+            value = int(value)
+            value = value / 30 * 100
+            if value >= 95:
+                value = 95
+            elif value <= 40:
+                value = 40
+        except:
+            value = 40
+        finally:
+            self.pwm.ChangeDutyCycle(value)
+            
     def stop(self):        
         if self.pwm:
             pwm.stop()

@@ -33,14 +33,13 @@ class Modulo:
     def update_inputs(self, inputs):
         if self.running:
             if self.__verify_inputs(inputs):
-                for key, value in inputs:
-                    if key == 'inp_i_fonte':
-                        self.gpio.set_gpio(input_element[key][2][1], value)
-                    else:
-                        if value == '1':
-                            self.gpio.set_gpio(input_element[key][2][1], True)
+                for key in inputs.keys():
+                    if key in elements:
+                        value = inputs[key]
+                        if key == 'inp_i_fonte':
+                            self.gpio.set_pwm(value)
                         else:
-                            self.gpio.set_gpio(input_element[key][2][1], False)
+                            self.gpio.set_gpio(input_element[key][2][1], value == '1')
                 return True
             else:
                 return False
@@ -56,16 +55,17 @@ class Modulo:
             if int(inputs['inp_i_fonte']) < 12 or int(inputs['inp_i_fonte']) > 30:
                 return False
 
-            if inputs['inp_b_rele3'] == '1' and inputs['inp_b_rele4'] == '1' and inputs['inp_b_rele5'] == '1':
+            if inputs['inp_b_rele1'] == '1' and inputs['inp_b_rele2'] == '1' and inputs['inp_b_rele3'] == '1':
                 return False
 
-            if inputs['inp_b_rele7'] == '1' and inputs['inp_b_rele8'] == '1' and inputs['inp_b_rele9'] == '1':
+            if inputs['inp_b_rele4'] == '1' and inputs['inp_b_rele5'] == '1' and inputs['inp_b_rele6'] == '1':
                 return False
             
-            if inputs['inp_b_rele11'] == '1' and inputs['inp_b_rele12'] == '1' and inputs['inp_b_rele13'] == '1':
+            if inputs['inp_b_rele7'] == '1' and inputs['inp_b_rele8'] == '1' and inputs['inp_b_rele9'] == '1':
                 return False
 
-        except:
+        except Exception as e:
+            print(e)
             return False
 
         return True
