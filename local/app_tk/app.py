@@ -57,14 +57,11 @@ def main():
                 # start running
                 self.modulo.start()
 
-                print(self.modulo.gpio)
-
                 def read_inputs():
                     # read inputs
                     if self.modulo.running:
                         
                         resp = Requests.r_inputs()
-                        print('Inputs - '+resp)
                         if resp:
                             text = str(resp)
 
@@ -73,8 +70,6 @@ def main():
                                 self.inputs = ast.literal_eval(text)
                                 self.last_line = text
                                 resp = self.modulo.update_inputs(self.inputs)
-                                print("Update Inputs Resp - ")
-                                print(resp)
                                 if resp:
                                     self.update_image()
                                 else:
