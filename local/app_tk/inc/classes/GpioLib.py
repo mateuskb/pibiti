@@ -16,6 +16,7 @@ class Gpiolib:
     """
     
     def __init__(self):
+        GPIO.cleanup()
         GPIO.setmode(GPIO.BOARD)
         self.__init_set_up()
         self.pwm=False
