@@ -361,29 +361,24 @@ async function verifyInputs(inputs){
     resp = true;
 
 
-    if(inputs['inp_b_rele2'] == "1"){
-        if(inputs['inp_b_rele3'] == "1" & inputs['inp_b_rele4'] == "1" & inputs['inp_b_rele5'] == "1"){
-            
-            resp = false
-            
-        } 
-    }
-    if(inputs['inp_b_rele6'] == "1"){
-        if(inputs['inp_b_rele7'] == "1" & inputs['inp_b_rele8'] == "1" & inputs['inp_b_rele9'] == "1"){
-    
-            resp = false
-    
-        }
+    if(inputs['inp_b_rele1'] == "1" & inputs['inp_b_rele2'] == "1" & inputs['inp_b_rele3'] == "1"){
+        
+        resp = false
+        
     } 
 
-    
-    if(inputs['inp_b_rele10'] == "1"){
-        if(inputs['inp_b_rele11'] == "1" & inputs['inp_b_rele12'] == "1" & inputs['inp_b_rele13'] == "1"){
-            
-            resp = false
-            
-        } 
+    if(inputs['inp_b_rele4'] == "1" & inputs['inp_b_rele5'] == "1" & inputs['inp_b_rele6'] == "1"){
+
+        resp = false
+
     }
+
+
+    if(inputs['inp_b_rele7'] == "1" & inputs['inp_b_rele8'] == "1" & inputs['inp_b_rele9'] == "1"){
+        
+        resp = false
+        
+    } 
         
 
 
@@ -404,7 +399,7 @@ async function verifyInputs(inputs){
 async function loadInputs(inputs){
 
     for (let key in inputs) {
-        if ( inputs['inp_b_rele1'] == "0"  & key !== 'inp_b_rele1'){
+        if ( inputs['inp_b_rele13'] == "0"  & key !== 'inp_b_rele13'){
             $("#"+key).prop('disabled', true);        
             $("#"+key).prop('checked', false);        
         } else {

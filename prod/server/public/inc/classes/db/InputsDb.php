@@ -180,17 +180,17 @@ class InputsDb {
             
             // TO DO
             // $data['inputs'] = $inputs;
-            if($inputs['inp_b_rele3'] == "1" & $inputs['inp_b_rele4'] == "1" & $inputs['inp_b_rele5'] == "1"):
+            if($inputs['inp_b_rele1'] == "1" & $inputs['inp_b_rele2'] == "1" & $inputs['inp_b_rele3'] == "1"):
 
                 $data['errors']['inputs'] = "Inputs podem causar dano!";
         
             endif; 
-            if($inputs['inp_b_rele7'] == "1" & $inputs['inp_b_rele8'] == "1" & $inputs['inp_b_rele9'] == "1"):
+            if($inputs['inp_b_rele4'] == "1" & $inputs['inp_b_rele5'] == "1" & $inputs['inp_b_rele6'] == "1"):
         
                 $data['errors']['inputs'] = "Inputs podem causar dano!";
         
             endif; 
-            if($inputs['inp_b_rele11'] == "1" & $inputs['inp_b_rele12'] == "1" & $inputs['inp_b_rele13'] == "1"):
+            if($inputs['inp_b_rele7'] == "1" & $inputs['inp_b_rele8'] == "1" & $inputs['inp_b_rele9'] == "1"):
         
                 $data['errors']['inputs'] = "Inputs podem causar dano!";
             endif;
