@@ -16,18 +16,19 @@ class Gpiolib:
     """
     
     def __init__(self):
+        GPIO.setmode(GPIO.BOARD)
         GPIO.setwarnings(False)
         GPIO.cleanup()
-        GPIO.setmode(GPIO.BOARD)
         self.__init_set_up()
         self.pwm=False
         
     def __init_set_up(self):
         for i in input_element.keys():
-            GPIO.setup(input_element[i][2][1], GPIO.OUT)
-            if i == 'inp_i_fonte':
-                self.pwm = GPIO.PWM(input_element[i][2][1], 1000)
-                self.pwm.start(40)
+            if(i in elements):
+                GPIO.setup(input_element[i][2][1], GPIO.OUT)
+                if i == 'inp_i_fonte':
+                    self.pwm = GPIO.PWM(input_element[i][2][1], 1000)
+                    self.pwm.start(40)
         
     def set_gpio(self, pin, value):
         if pin == input_element['inp_i_fonte'][2][1]:

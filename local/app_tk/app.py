@@ -121,6 +121,12 @@ def main():
 
     root = tk.Tk()
     my_gui = GUI(root)
+    def on_closing():
+        if messagebox.askokcancel("Quit", "Deseja desligar o módulo?"):
+            self.modulo.stop()
+            root.destroy()
+
+    root.protocol("WM_DELETE_WINDOW", on_closing)
     root.mainloop()
 
 if __name__ == "__main__":

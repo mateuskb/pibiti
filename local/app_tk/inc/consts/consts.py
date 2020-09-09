@@ -6,6 +6,7 @@ resolution = 800, 800
 # Input positions
 size_x = 20
 size_y = 20
+elements = ['inp_i_fonte', "inp_b_rele1", "inp_b_rele2", "inp_b_rele3", "inp_b_rele4", "inp_b_rele5", "inp_b_rele6", "inp_b_rele7", "inp_b_rele8", "inp_b_rele9", "inp_b_rele10", "inp_b_rele11", "inp_b_rele12", "inp_b_rele13"]
 input_element = {
     # fonte
     "inp_i_fonte" : [['Fonte :', [55,50]], [100, 50], ['VCC', 10]],
