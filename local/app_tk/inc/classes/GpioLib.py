@@ -40,8 +40,8 @@ class Gpiolib:
         try:
             value = int(value)
             value = value / 30 * 100
-            if value >= 95:
-                value = 95
+            if value >= 100:
+                value = 100
             elif value <= 40:
                 value = 40
         except:
