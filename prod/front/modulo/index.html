@@ -104,6 +104,13 @@
                         <p>Para a proteção do módulo, todos os botões estão sincronizados com o experimento remoto, portanto ao clicar muito rápido poderá ser sentida algumas inconsistências, para resolver isso, clique mais devagar!</p>
                     </div>
 
+                    <div id='legenda' class="ml-3">
+                        <p>Legenda</p>
+                        <p id='legendaLigado'>Ligado</p>
+                        <p id='legendaDesligado'>Desligado</p>
+                        <p id='legendaBloqueado'>Bloqueado</p>
+                    </div>
+
                     <div class="control">
 
                         <div class='row btns-div'>
@@ -112,7 +119,7 @@
                                 <div class="mr-2" style="float: left;">
                                     <p class='inputText' id='ligarModuloText'>Ligar módulo</p>
                                 </div>
-                                <div class="w-50" style="float: right;">
+                                <div class="w-50" style="display: inline;">
                                     <label class="switch">
                                         
                                         <input type="checkbox" id='inp_b_rele13'>
@@ -128,7 +135,7 @@
 
                             <p class='inputText' style="margin-left: 20px;">Fonte</p>
 
-                            <input type="range" min="15" max="30" class="ranger w-90" id="inp_i_fonte">
+                            <input type="range" min="12" max="30" class="ranger w-90" id="inp_i_fonte">
 
                             <p id="fonte_out" class="inputText font-output">15</p>
 
@@ -142,7 +149,7 @@
                                     <div class="w-75 ml-auto mr-auto">
         
                                         <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>Ativar ramo 1</p>
+                                            <p class='inputText'>Ramo A</p>
                                         </div>
                                         <div class="w-80">
                                             <label class="switch">
@@ -225,7 +232,7 @@
                                     <div class="w-75 ml-auto mr-auto">
         
                                         <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>Ativar ramo 2</p>
+                                            <p class='inputText'>Ramo B</p>
                                         </div>
                                         <div class="w-80">
                                             <label class="switch">
@@ -308,7 +315,7 @@
                                     <div class="w-75 ml-auto mr-auto">
         
                                         <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>Ativar ramo 3</p>
+                                            <p class='inputText'>Ramo C</p>
                                         </div>
                                         <div class="w-80">
                                             <label class="switch">

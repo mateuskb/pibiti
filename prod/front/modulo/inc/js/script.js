@@ -360,6 +360,11 @@ async function verifyInputs(inputs){
 
     resp = true;
 
+    if(parseInt(inputs['inp_i_fonte']) < 12 ||  parseInt(inputs['inp_i_fonte']) > 30){
+
+        resp = false
+
+    }
 
     if(inputs['inp_b_rele1'] == "1" & inputs['inp_b_rele2'] == "1" & inputs['inp_b_rele3'] == "1"){
         
@@ -398,26 +403,65 @@ async function verifyInputs(inputs){
 
 async function loadInputs(inputs){
 
-    for (let key in inputs) {
-        if ( inputs['inp_b_rele13'] == "0"  & key !== 'inp_b_rele13'){
-            $("#"+key).prop('disabled', true);        
-            $("#"+key).prop('checked', false);        
-        } else {
+    if(inputs['inp_b_rele13'] == '1') {
+        ramos.forEach((key)=>{
             $("#"+key).prop('disabled', false);        
+        })
+        resistores.forEach((key)=>{
+            $("#"+key).prop('disabled', true);        
+        })
 
+        if(inputs['inp_b_rele10'] == '1') {
+            ramo1.forEach((key)=>{
+                $("#"+key).prop('disabled', false);        
+            })
+        } else {
+            ramo1.forEach((key)=>{
+                $("#"+key).prop('disabled', true);        
+            })
+        }
+
+        if(inputs['inp_b_rele11'] == '1') {
+            ramo2.forEach((key)=>{
+                $("#"+key).prop('disabled', false);        
+            })
+        } else {
+            ramo2.forEach((key)=>{
+                $("#"+key).prop('disabled', true);        
+            })
+        }
+
+        if(inputs['inp_b_rele12'] == '1') {
+            ramo3.forEach((key)=>{
+                $("#"+key).prop('disabled', false);        
+            })
+        } else {
+            ramo3.forEach((key)=>{
+                $("#"+key).prop('disabled', true);        
+            })
+        }
+
+    } else {
+        reles_inputs.forEach((key)=>{
+            $("#"+key).prop('disabled', true);        
+        });
+    }
+    
+    for (let key in inputs) {
+
+        if ( key == 'inp_i_fonte'){
             
-            if ( key == 'inp_i_fonte'){
-                
-                $("#inp_i_fonte").val(inputs[key]);
-                
-                var output = document.getElementById("fonte_out");
-                
-                output.innerHTML = inputs[key];
-                
-            }else{
-                
+            $("#inp_i_fonte").val(inputs[key]);
+            
+            var output = document.getElementById("fonte_out");
+            
+            output.innerHTML = inputs[key];
+            
+        }else{
+            if(resistores.includes(key)){
+                (inputs[key]==1) ? $("#"+key).prop("checked", false ): $("#"+key).prop("checked", true );
+            } else {
                 (inputs[key]==1) ? $("#"+key).prop("checked", true ): $("#"+key).prop("checked", false );
-                
             }
         }
 
@@ -521,14 +565,11 @@ $(document).ready(function () {
 
                     if (this.checked) {
 
-                        inputs['inp_b_rele1'] = "1";
-
-                        $('#ligarModuloText').text("Desligar módulo");
+                        inputs['inp_b_rele1'] = "0";
                         
                     } else {
                         
-                        inputs['inp_b_rele1'] = "0";
-                        $('#ligarModuloText').text("Ligar módulo");
+                        inputs['inp_b_rele1'] = "1";
 
                     }
 
@@ -576,11 +617,11 @@ $(document).ready(function () {
 
                     if (this.checked) {
 
-                        inputs['inp_b_rele2'] = "1";
+                        inputs['inp_b_rele2'] = "0";
 
                     } else {
 
-                        inputs['inp_b_rele2'] = "0";
+                        inputs['inp_b_rele2'] = "1";
 
                     }
 
@@ -628,11 +669,11 @@ $(document).ready(function () {
 
                     if (this.checked) {
 
-                        inputs['inp_b_rele3'] = "1";
+                        inputs['inp_b_rele3'] = "0";
 
                     } else {
 
-                        inputs['inp_b_rele3'] = "0";
+                        inputs['inp_b_rele3'] = "1";
 
                     }
 
@@ -680,11 +721,11 @@ $(document).ready(function () {
 
                     if (this.checked) {
 
-                        inputs['inp_b_rele4'] = "1";
+                        inputs['inp_b_rele4'] = "0";
 
                     } else {
 
-                        inputs['inp_b_rele4'] = "0";
+                        inputs['inp_b_rele4'] = "1";
 
                     }
 
@@ -732,11 +773,11 @@ $(document).ready(function () {
 
                     if (this.checked) {
 
-                        inputs['inp_b_rele5'] = "1";
+                        inputs['inp_b_rele5'] = "0";
 
                     } else {
 
-                        inputs['inp_b_rele5'] = "0";
+                        inputs['inp_b_rele5'] = "1";
 
                     }
 
@@ -783,11 +824,11 @@ $(document).ready(function () {
 
                     if (this.checked) {
 
-                        inputs['inp_b_rele6'] = "1";
+                        inputs['inp_b_rele6'] = "0";
 
                     } else {
 
-                        inputs['inp_b_rele6'] = "0";
+                        inputs['inp_b_rele6'] = "1";
 
                     }
 
@@ -835,11 +876,11 @@ $(document).ready(function () {
 
                     if (this.checked) {
 
-                        inputs['inp_b_rele7'] = "1";
+                        inputs['inp_b_rele7'] = "0";
 
                     } else {
 
-                        inputs['inp_b_rele7'] = "0";
+                        inputs['inp_b_rele7'] = "1";
 
                     }
 
@@ -887,11 +928,11 @@ $(document).ready(function () {
 
                     if (this.checked) {
 
-                        inputs['inp_b_rele8'] = "1";
+                        inputs['inp_b_rele8'] = "0";
 
                     } else {
 
-                        inputs['inp_b_rele8'] = "0";
+                        inputs['inp_b_rele8'] = "1";
 
                     }
 
@@ -939,11 +980,11 @@ $(document).ready(function () {
 
                     if (this.checked) {
 
-                        inputs['inp_b_rele9'] = "1";
+                        inputs['inp_b_rele9'] = "0";
 
                     } else {
 
-                        inputs['inp_b_rele9'] = "0";
+                        inputs['inp_b_rele9'] = "1";
 
                     }
 
@@ -995,6 +1036,9 @@ $(document).ready(function () {
 
                     } else {
 
+                        ramo1.forEach((value)=>{
+                            inputs[value] = "0"
+                        })
                         inputs['inp_b_rele10'] = "0";
 
                     }
@@ -1048,6 +1092,9 @@ $(document).ready(function () {
                     } else {
 
                         inputs['inp_b_rele11'] = "0";
+                        ramo2.forEach((value)=>{
+                            inputs[value] = "0"
+                        })
 
                     }
 
@@ -1100,6 +1147,9 @@ $(document).ready(function () {
                     } else {
 
                         inputs['inp_b_rele12'] = "0";
+                        ramo1.forEach((value)=>{
+                            inputs[value] = "0"
+                        })
 
                     }
 
@@ -1148,11 +1198,18 @@ $(document).ready(function () {
                     if (this.checked) {
 
                         inputs['inp_b_rele13'] = "1";
-
+                        $('#ligarModuloText').text("Desligar módulo");
+                        
                     } else {
-
+                        
                         inputs['inp_b_rele13'] = "0";
-
+                        $('#ligarModuloText').text("Ligar módulo");
+                        Object.keys(inputs).forEach(element => {
+                            if(reles_inputs.includes(element)){
+                                inputs[element] = "0"
+                            }
+                        });
+                        inputs['inp_i_fonte'] = "12";
                     }
 
                     verifyInputs(inputs).then((resp)=>{

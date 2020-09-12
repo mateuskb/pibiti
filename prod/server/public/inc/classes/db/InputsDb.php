@@ -180,6 +180,19 @@ class InputsDb {
             
             // TO DO
             // $data['inputs'] = $inputs;
+            try {
+
+                if(intval($inputs['inp_i_fonte']) < 12 || intval($inputs['inp_i_fonte'])> 30){
+                    
+                    $data['errors']['inputs'] = "Inputs podem causar dano!";
+                }
+
+            } catch (Exception $e){
+
+                $data['errors']['inputs'] = "Inputs podem causar dano!";
+
+            }
+
             if($inputs['inp_b_rele1'] == "1" & $inputs['inp_b_rele2'] == "1" & $inputs['inp_b_rele3'] == "1"):
 
                 $data['errors']['inputs'] = "Inputs podem causar dano!";

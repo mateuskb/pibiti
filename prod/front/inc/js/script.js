@@ -28,9 +28,9 @@ $(document).ready(function () {
 
                 data = resp.data;
 
-                console.log("Data Permission:");
+                // console.log("Data Permission:");
 
-                console.log(data);
+                // console.log(data);
 
                 if(data.ok){
 
