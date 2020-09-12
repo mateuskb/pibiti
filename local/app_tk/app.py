@@ -42,6 +42,8 @@ def main():
 
             self.build()
 
+            self.run()
+
         def on_closing(self):
                 self.modulo.stop()
                 root.destroy()
