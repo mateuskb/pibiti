@@ -50,7 +50,7 @@
 
 <html lang='pt-br'>
 
-    <section id='nav'>
+    <section id='nav' >
 
         <nav class="navbar navbar-dark bg-dark justify-content-between">
 
@@ -68,7 +68,7 @@
 
             <div class="row">
 
-                <div class="col-sm-12">
+                <div class="col-sm-8">
 
                     <div class="live">
 
@@ -105,321 +105,323 @@
 
                         </iframe> -->
 
-                    </div>      
-
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-sm-8 ml-auto mr-auto mt-4">
-
-                    <h2>Controle</h2>
+                    </div>    
+                     
 
                     <div class="aviso">
                         <p>Para a proteção do módulo, todos os botões estão sincronizados com o experimento remoto, portanto ao clicar muito rápido poderá ser sentida algumas inconsistências, para resolver isso, clique mais devagar!</p>
                     </div>
 
-                    <div id='legenda' class="ml-3">
-                        <p>Legenda</p>
-                        <p id='legendaLigado'>Ligado</p>
-                        <p id='legendaDesligado'>Desligado</p>
-                        <p id='legendaBloqueado'>Bloqueado</p>
-                    </div>
 
-                    <div class="control">
+                </div>
 
-                        <div class='row btns-div'>
-                            <div class="w-75 ml-3 mr-auto">
+                <div class="col-sm-4">
+
+                    <div>
+    
+                        <h2>Controle</h2>
+
+                        <div id='legenda' class="ml-3 mt-3">
+                            <p>Legenda</p>
+                            <p id='legendaLigado'>Ligado</p>
+                            <p id='legendaDesligado'>Desligado</p>
+                            <p id='legendaBloqueado'>Bloqueado</p>
+                        </div> 
+                        
+                        <div class="control">
+    
+                            <div class='row btns-div'>
+                                <div class="w-75 ml-3 mr-auto">
+                                    
+                                    <div class="mr-2" style="float: left;">
+                                        <p class='inputText' id='ligarModuloText'>Ligar módulo</p>
+                                    </div>
+                                    <div class="w-50" style="display: inline;">
+                                        <label class="switch">
+                                            
+                                            <input type="checkbox" id='inp_b_rele13'>
+                                            
+                                            <span class="slider"></span>
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="slidecontainer">
+    
+                                <p class='inputText' style="margin-left: 20px;">Fonte</p>
+    
+                                <input type="range" min="12" max="30" class="ranger w-90" id="inp_i_fonte">
+    
+                                <p id="fonte_out" class="inputText font-output">15</p>
+    
+                            </div>
+    
+                            
+                            <div class="row btns-div">
                                 
-                                <div class="mr-2" style="float: left;">
-                                    <p class='inputText' id='ligarModuloText'>Ligar módulo</p>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="w-75 ml-auto mr-auto">
+            
+                                            <div class="mr-2" style="float: left;">
+                                                <p class='inputText'>Ramo A</p>
+                                            </div>
+                                            <div class="w-80">
+                                                <label class="switch">
+                    
+                                                    <input type="checkbox" id='inp_b_rele10'>
+                    
+                                                    <span class="slider"></span>
+                    
+                                                </label>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                    <hr/>
+            
+                                    <div class="row">
+            
+                                        <div class="w-75 ml-auto mr-auto">
+            
+                                            <div class="mr-2" style="float: left;">
+                                                <p class='inputText'>R1A</p>
+                                            </div>
+                                            <div class="w-50" style="float: right;">
+                                                <label class="switch">
+                    
+                                                    <input type="checkbox" id='inp_b_rele1'>
+                    
+                                                    <span class="slider"></span>
+                    
+                                                </label>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+            
+                                    <div class="row">
+            
+                                        <div class="w-75 ml-auto mr-auto">
+            
+                                            <div class="mr-2" style="float: left;">
+                                                <p class='inputText'>R2A</p>
+                                            </div>
+                                            <div class="w-50" style="float: right;">
+                                                <label class="switch">
+                    
+                                                    <input type="checkbox" id='inp_b_rele2'>
+                    
+                                                    <span class="slider"></span>
+                    
+                                                </label>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+            
+                                    <div class="row">
+            
+                                        <div class="w-75 ml-auto mr-auto">
+            
+                                            <div class="mr-2" style="float: left;">
+                                                <p class='inputText'>R3A</p>
+                                            </div>
+                                            <div class="w-50" style="float: right;">
+                                                <label class="switch">
+                    
+                                                    <input type="checkbox" id='inp_b_rele3'>
+                    
+                                                    <span class="slider"></span>
+                    
+                                                </label>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                    <hr/>
                                 </div>
-                                <div class="w-50" style="display: inline;">
-                                    <label class="switch">
-                                        
-                                        <input type="checkbox" id='inp_b_rele13'>
-                                        
-                                        <span class="slider"></span>
-                                        
-                                    </label>
+                                
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="w-75 ml-auto mr-auto">
+            
+                                            <div class="mr-2" style="float: left;">
+                                                <p class='inputText'>Ramo B</p>
+                                            </div>
+                                            <div class="w-80">
+                                                <label class="switch">
+                    
+                                                    <input type="checkbox" id='inp_b_rele11'>
+                    
+                                                    <span class="slider"></span>
+                    
+                                                </label>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                    <hr/>
+    
+                                    <div class="row">
+    
+                                        <div class="w-75 ml-auto mr-auto">
+    
+                                            <div class="mr-2" style="float: left;">
+                                                <p class='inputText'>R1B</p>
+                                            </div>
+                                            <div class="w-50" style="float: right;">
+                                                <label class="switch">
+                    
+                                                    <input type="checkbox" id='inp_b_rele4'>
+                    
+                                                    <span class="slider"></span>
+                    
+                                                </label>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="row">
+    
+                                        <div class="w-75 ml-auto mr-auto">
+    
+                                            <div class="mr-2" style="float: left;">
+                                                <p class='inputText'>R2B</p>
+                                            </div>
+                                            <div class="w-50" style="float: right;">
+                                                <label class="switch">
+                    
+                                                    <input type="checkbox" id='inp_b_rele5'>
+                    
+                                                    <span class="slider"></span>
+                    
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="row">
+    
+                                        <div class="w-75 ml-auto mr-auto">
+    
+                                            <div class="mr-2" style="float: left;">
+                                                <p class='inputText'>R3B</p>
+                                            </div>
+                                            <div class="w-50" style="float: right;">
+                                                <label class="switch">
+                    
+                                                    <input type="checkbox" id='inp_b_rele6'>
+                    
+                                                    <span class="slider"></span>
+                    
+                                                </label>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+    
+                                    <hr/>
                                 </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="w-75 ml-auto mr-auto">
+            
+                                            <div class="mr-2" style="float: left;">
+                                                <p class='inputText'>Ramo C</p>
+                                            </div>
+                                            <div class="w-80">
+                                                <label class="switch">
+                    
+                                                    <input type="checkbox" id='inp_b_rele12'>
+                    
+                                                    <span class="slider"></span>
+                    
+                                                </label>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                    <hr/>
+                                    <div class="row">
+            
+                                        <div class="w-75 ml-auto mr-auto">
+            
+                                            <div class="mr-2" style="float: left;">
+                                                <p class='inputText'>R1C</p>
+                                            </div>
+                                            <div class="w-50" style="float: right;">
+                                                <label class="switch">
+                    
+                                                    <input type="checkbox" id='inp_b_rele7'>
+                    
+                                                    <span class="slider"></span>
+                    
+                                                </label>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+            
+                                    <div class="row">
+            
+                                        <div class="w-75 ml-auto mr-auto">
+            
+                                            <div class="mr-2" style="float: left;">
+                                                <p class='inputText'>R2C</p>
+                                            </div>
+                                            <div class="w-50" style="float: right;">
+                                                <label class="switch">
+                    
+                                                    <input type="checkbox" id='inp_b_rele8'>
+                    
+                                                    <span class="slider"></span>
+                    
+                                                </label>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+            
+                                    <div class="row">
+            
+                                        <div class="w-75 ml-auto mr-auto">
+            
+                                            <div class="mr-2" style="float: left;">
+                                                <p class='inputText'>R3C</p>
+                                            </div>
+                                            <div class="w-50" style="float: right;">
+                                                <label class="switch">
+                    
+                                                    <input type="checkbox" id='inp_b_rele9'>
+                    
+                                                    <span class="slider"></span>
+                    
+                                                </label>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+    
+                                    <hr/>
+    
+                                </div>
+    
                             </div>
-                        </div>
-
-                        <div class="slidecontainer">
-
-                            <p class='inputText' style="margin-left: 20px;">Fonte</p>
-
-                            <input type="range" min="12" max="30" class="ranger w-90" id="inp_i_fonte">
-
-                            <p id="fonte_out" class="inputText font-output">15</p>
-
-                        </div>
-
-                        
-                        <div class="row btns-div">
                             
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="w-75 ml-auto mr-auto">
-        
-                                        <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>Ramo A</p>
-                                        </div>
-                                        <div class="w-80">
-                                            <label class="switch">
-                
-                                                <input type="checkbox" id='inp_b_rele10'>
-                
-                                                <span class="slider"></span>
-                
-                                            </label>
-                                        </div>
-                                    </div>
-        
-                                </div>
-                                <hr/>
-        
-                                <div class="row">
-        
-                                    <div class="w-75 ml-auto mr-auto">
-        
-                                        <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>R1A</p>
-                                        </div>
-                                        <div class="w-50" style="float: right;">
-                                            <label class="switch">
-                
-                                                <input type="checkbox" id='inp_b_rele1'>
-                
-                                                <span class="slider"></span>
-                
-                                            </label>
-                                        </div>
-                                    </div>
-        
-                                </div>
-        
-                                <div class="row">
-        
-                                    <div class="w-75 ml-auto mr-auto">
-        
-                                        <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>R2A</p>
-                                        </div>
-                                        <div class="w-50" style="float: right;">
-                                            <label class="switch">
-                
-                                                <input type="checkbox" id='inp_b_rele2'>
-                
-                                                <span class="slider"></span>
-                
-                                            </label>
-                                        </div>
-                                    </div>
-        
-                                </div>
-        
-                                <div class="row">
-        
-                                    <div class="w-75 ml-auto mr-auto">
-        
-                                        <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>R3A</p>
-                                        </div>
-                                        <div class="w-50" style="float: right;">
-                                            <label class="switch">
-                
-                                                <input type="checkbox" id='inp_b_rele3'>
-                
-                                                <span class="slider"></span>
-                
-                                            </label>
-                                        </div>
-                                    </div>
-        
-                                </div>
-                                <hr/>
-                            </div>
-                            
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="w-75 ml-auto mr-auto">
-        
-                                        <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>Ramo B</p>
-                                        </div>
-                                        <div class="w-80">
-                                            <label class="switch">
-                
-                                                <input type="checkbox" id='inp_b_rele11'>
-                
-                                                <span class="slider"></span>
-                
-                                            </label>
-                                        </div>
-                                    </div>
-        
-                                </div>
-                                <hr/>
-
-                                <div class="row">
-
-                                    <div class="w-75 ml-auto mr-auto">
-
-                                        <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>R1B</p>
-                                        </div>
-                                        <div class="w-50" style="float: right;">
-                                            <label class="switch">
-                
-                                                <input type="checkbox" id='inp_b_rele4'>
-                
-                                                <span class="slider"></span>
-                
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="w-75 ml-auto mr-auto">
-
-                                        <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>R2B</p>
-                                        </div>
-                                        <div class="w-50" style="float: right;">
-                                            <label class="switch">
-                
-                                                <input type="checkbox" id='inp_b_rele5'>
-                
-                                                <span class="slider"></span>
-                
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="w-75 ml-auto mr-auto">
-
-                                        <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>R3B</p>
-                                        </div>
-                                        <div class="w-50" style="float: right;">
-                                            <label class="switch">
-                
-                                                <input type="checkbox" id='inp_b_rele6'>
-                
-                                                <span class="slider"></span>
-                
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <hr/>
-                            </div>
-                            
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="w-75 ml-auto mr-auto">
-        
-                                        <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>Ramo C</p>
-                                        </div>
-                                        <div class="w-80">
-                                            <label class="switch">
-                
-                                                <input type="checkbox" id='inp_b_rele12'>
-                
-                                                <span class="slider"></span>
-                
-                                            </label>
-                                        </div>
-                                    </div>
-        
-                                </div>
-                                <hr/>
-                                <div class="row">
-        
-                                    <div class="w-75 ml-auto mr-auto">
-        
-                                        <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>R1C</p>
-                                        </div>
-                                        <div class="w-50" style="float: right;">
-                                            <label class="switch">
-                
-                                                <input type="checkbox" id='inp_b_rele7'>
-                
-                                                <span class="slider"></span>
-                
-                                            </label>
-                                        </div>
-                                    </div>
-        
-                                </div>
-        
-                                <div class="row">
-        
-                                    <div class="w-75 ml-auto mr-auto">
-        
-                                        <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>R2C</p>
-                                        </div>
-                                        <div class="w-50" style="float: right;">
-                                            <label class="switch">
-                
-                                                <input type="checkbox" id='inp_b_rele8'>
-                
-                                                <span class="slider"></span>
-                
-                                            </label>
-                                        </div>
-                                    </div>
-        
-                                </div>
-        
-                                <div class="row">
-        
-                                    <div class="w-75 ml-auto mr-auto">
-        
-                                        <div class="mr-2" style="float: left;">
-                                            <p class='inputText'>R3C</p>
-                                        </div>
-                                        <div class="w-50" style="float: right;">
-                                            <label class="switch">
-                
-                                                <input type="checkbox" id='inp_b_rele9'>
-                
-                                                <span class="slider"></span>
-                
-                                            </label>
-                                        </div>
-                                    </div>
-        
-                                </div>
-
-                                <hr/>
-
-                            </div>
-
+    
                         </div>
-                        
-
+    
+                        <!-- <div class="referencia">
+                            <h2>Referência</h2>
+                            <img src="inc/img/modulo.png" alt="Imagem referência do módulo" />
+                        </div> -->
                     </div>
-
-                    <!-- <div class="referencia">
-                        <h2>Referência</h2>
-                        <img src="inc/img/modulo.png" alt="Imagem referência do módulo" />
-                    </div> -->
+    
                 </div>
 
             </div>
