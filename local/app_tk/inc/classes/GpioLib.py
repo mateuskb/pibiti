@@ -40,7 +40,7 @@ class Gpiolib:
         try:
             value = int(value)
             value = value / 30 * 100
-            value += 0.5 # Compensação perda
+            value = value * 1.05 # Compensação perda
             if value >= 100:
                 value = 100
             elif value <= 40:
